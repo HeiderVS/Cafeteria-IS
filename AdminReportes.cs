@@ -9,5 +9,12 @@ namespace Cafeteria_IS
         {
             InitializeComponent();
         }
+
+        private void radMenuBtnAgregarUsuario_Click(object sender, EventArgs e)
+        {
+            UsuariosAgregar usuariosAgregar = new UsuariosAgregar();
+            usuariosAgregar.Show();
+            this.Hide();
+        }
     }
 }

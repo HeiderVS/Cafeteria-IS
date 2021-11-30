@@ -53,6 +53,7 @@ namespace Cafeteria_IS
             this.btnCancelarAgrUsuario = new Telerik.WinControls.UI.RadLabel();
             this.btnMostrarContra = new Telerik.WinControls.UI.RadRadioButton();
             this.radMenu1 = new Telerik.WinControls.UI.RadMenu();
+            this.materialTheme1 = new Telerik.WinControls.Themes.MaterialTheme();
             ((System.ComponentModel.ISupportInitialize) (this.radPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.txtApPaterno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.txtNombre)).BeginInit();
@@ -254,6 +255,7 @@ namespace Cafeteria_IS
             this.txtContraAgregarUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtContraAgregarUsuario.Location = new System.Drawing.Point(65, 576);
             this.txtContraAgregarUsuario.Name = "txtContraAgregarUsuario";
+            this.txtContraAgregarUsuario.PasswordChar = '*';
             this.txtContraAgregarUsuario.Size = new System.Drawing.Size(172, 29);
             this.txtContraAgregarUsuario.TabIndex = 15;
             // 
@@ -278,13 +280,14 @@ namespace Cafeteria_IS
             // 
             // radMenu1
             // 
-            this.radMenu1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.radMenu1.BackColor = System.Drawing.Color.Gainsboro;
             this.radMenu1.Font = new System.Drawing.Font("Segoe UI Historic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.radMenu1.Items.AddRange(new Telerik.WinControls.RadItem[] {this.radMenuItem2, this.radMenuItem1, this.radBtnReports});
             this.radMenu1.Location = new System.Drawing.Point(0, 0);
             this.radMenu1.Name = "radMenu1";
-            this.radMenu1.Size = new System.Drawing.Size(1134, 23);
+            this.radMenu1.Size = new System.Drawing.Size(1134, 35);
             this.radMenu1.TabIndex = 1;
+            this.radMenu1.ThemeName = "Material";
             // 
             // UsuariosAgregar
             // 
@@ -335,6 +338,8 @@ namespace Cafeteria_IS
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private Telerik.WinControls.Themes.MaterialTheme materialTheme1;
 
         private Telerik.WinControls.UI.RadMenuItem radBtnReports;
 

@@ -40,6 +40,13 @@ namespace Cafeteria_IS
             this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
             this.radDateTimePicker2 = new Telerik.WinControls.UI.RadDateTimePicker();
             this.radButton1 = new Telerik.WinControls.UI.RadButton();
+            this.materialTheme1 = new Telerik.WinControls.Themes.MaterialTheme();
+            this.radMenu1 = new Telerik.WinControls.UI.RadMenu();
+            this.radMenuItem2 = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuBtnAgregarUsuario = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuItem5 = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuItem1 = new Telerik.WinControls.UI.RadMenuItem();
+            this.radBtnReports = new Telerik.WinControls.UI.RadMenuItem();
             ((System.ComponentModel.ISupportInitialize) (this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.radGridView1)).BeginInit();
@@ -49,6 +56,7 @@ namespace Cafeteria_IS
             ((System.ComponentModel.ISupportInitialize) (this.radLabel4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.radDateTimePicker2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.radButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radMenu1)).BeginInit();
             this.SuspendLayout();
             // 
             // radLabel1
@@ -59,6 +67,7 @@ namespace Cafeteria_IS
             this.radLabel1.Size = new System.Drawing.Size(203, 65);
             this.radLabel1.TabIndex = 0;
             this.radLabel1.Text = "Reportes";
+            this.radLabel1.ThemeName = "Material";
             // 
             // radLabel2
             // 
@@ -68,6 +77,7 @@ namespace Cafeteria_IS
             this.radLabel2.Size = new System.Drawing.Size(712, 30);
             this.radLabel2.TabIndex = 1;
             this.radLabel2.Text = "Obtenga la informacion de ordenes de ventas generadas en un rango de tiempo. ";
+            this.radLabel2.ThemeName = "Material";
             // 
             // radGridView1
             // 
@@ -79,21 +89,24 @@ namespace Cafeteria_IS
             this.radGridView1.Name = "radGridView1";
             this.radGridView1.Size = new System.Drawing.Size(975, 471);
             this.radGridView1.TabIndex = 2;
+            this.radGridView1.ThemeName = "Material";
             // 
             // radDateTimePicker1
             // 
-            this.radDateTimePicker1.Location = new System.Drawing.Point(200, 307);
+            this.radDateTimePicker1.CalendarSize = new System.Drawing.Size(290, 320);
+            this.radDateTimePicker1.Location = new System.Drawing.Point(215, 292);
             this.radDateTimePicker1.Name = "radDateTimePicker1";
-            this.radDateTimePicker1.Size = new System.Drawing.Size(164, 20);
+            this.radDateTimePicker1.Size = new System.Drawing.Size(164, 36);
             this.radDateTimePicker1.TabIndex = 3;
             this.radDateTimePicker1.TabStop = false;
             this.radDateTimePicker1.Text = "30 November 2021";
+            this.radDateTimePicker1.ThemeName = "Material";
             this.radDateTimePicker1.Value = new System.DateTime(2021, 11, 30, 16, 26, 45, 572);
             // 
             // radLabel3
             // 
             this.radLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.radLabel3.Location = new System.Drawing.Point(78, 302);
+            this.radLabel3.Location = new System.Drawing.Point(93, 301);
             this.radLabel3.Name = "radLabel3";
             this.radLabel3.Size = new System.Drawing.Size(116, 25);
             this.radLabel3.TabIndex = 1;
@@ -102,7 +115,7 @@ namespace Cafeteria_IS
             // radLabel4
             // 
             this.radLabel4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.radLabel4.Location = new System.Drawing.Point(412, 303);
+            this.radLabel4.Location = new System.Drawing.Point(449, 301);
             this.radLabel4.Name = "radLabel4";
             this.radLabel4.Size = new System.Drawing.Size(95, 23);
             this.radLabel4.TabIndex = 4;
@@ -111,27 +124,76 @@ namespace Cafeteria_IS
             // 
             // radDateTimePicker2
             // 
-            this.radDateTimePicker2.Location = new System.Drawing.Point(534, 308);
+            this.radDateTimePicker2.CalendarSize = new System.Drawing.Size(290, 320);
+            this.radDateTimePicker2.Location = new System.Drawing.Point(550, 292);
             this.radDateTimePicker2.Name = "radDateTimePicker2";
-            this.radDateTimePicker2.Size = new System.Drawing.Size(164, 20);
+            this.radDateTimePicker2.Size = new System.Drawing.Size(164, 36);
             this.radDateTimePicker2.TabIndex = 5;
             this.radDateTimePicker2.TabStop = false;
             this.radDateTimePicker2.Text = "30 November 2021";
+            this.radDateTimePicker2.ThemeName = "Material";
             this.radDateTimePicker2.Value = new System.DateTime(2021, 11, 30, 16, 26, 45, 572);
             // 
             // radButton1
             // 
-            this.radButton1.Location = new System.Drawing.Point(778, 305);
+            this.radButton1.BackColor = System.Drawing.Color.Navy;
+            this.radButton1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.radButton1.Location = new System.Drawing.Point(778, 290);
             this.radButton1.Name = "radButton1";
-            this.radButton1.Size = new System.Drawing.Size(275, 24);
+            this.radButton1.Size = new System.Drawing.Size(275, 36);
             this.radButton1.TabIndex = 6;
             this.radButton1.Text = "Generar reporte";
+            this.radButton1.ThemeName = "Material";
+            // 
+            // radMenu1
+            // 
+            this.radMenu1.BackColor = System.Drawing.Color.Gainsboro;
+            this.radMenu1.Font = new System.Drawing.Font("Segoe UI Historic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.radMenu1.Items.AddRange(new Telerik.WinControls.RadItem[] {this.radMenuItem2, this.radMenuItem1, this.radBtnReports});
+            this.radMenu1.Location = new System.Drawing.Point(0, 0);
+            this.radMenu1.Name = "radMenu1";
+            this.radMenu1.Size = new System.Drawing.Size(1134, 37);
+            this.radMenu1.TabIndex = 7;
+            this.radMenu1.ThemeName = "Material";
+            // 
+            // radMenuItem2
+            // 
+            this.radMenuItem2.Items.AddRange(new Telerik.WinControls.RadItem[] {this.radMenuBtnAgregarUsuario, this.radMenuItem5});
+            this.radMenuItem2.Name = "radMenuItem2";
+            this.radMenuItem2.Text = "Usuarios";
+            this.radMenuItem2.UseCompatibleTextRendering = false;
+            // 
+            // radMenuBtnAgregarUsuario
+            // 
+            this.radMenuBtnAgregarUsuario.Name = "radMenuBtnAgregarUsuario";
+            this.radMenuBtnAgregarUsuario.Text = "Editar";
+            this.radMenuBtnAgregarUsuario.UseCompatibleTextRendering = false;
+            this.radMenuBtnAgregarUsuario.Click += new System.EventHandler(this.radMenuBtnAgregarUsuario_Click);
+            // 
+            // radMenuItem5
+            // 
+            this.radMenuItem5.Name = "radMenuItem5";
+            this.radMenuItem5.Text = "Eliminar";
+            this.radMenuItem5.UseCompatibleTextRendering = false;
+            // 
+            // radMenuItem1
+            // 
+            this.radMenuItem1.Name = "radMenuItem1";
+            this.radMenuItem1.Text = "Inventario";
+            this.radMenuItem1.UseCompatibleTextRendering = false;
+            // 
+            // radBtnReports
+            // 
+            this.radBtnReports.Name = "radBtnReports";
+            this.radBtnReports.Text = "Reportes";
+            this.radBtnReports.UseCompatibleTextRendering = false;
             // 
             // AdminReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1134, 890);
+            this.Controls.Add(this.radMenu1);
             this.Controls.Add(this.radButton1);
             this.Controls.Add(this.radLabel4);
             this.Controls.Add(this.radDateTimePicker2);
@@ -151,9 +213,19 @@ namespace Cafeteria_IS
             ((System.ComponentModel.ISupportInitialize) (this.radLabel4)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.radDateTimePicker2)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.radButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radMenu1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private Telerik.WinControls.UI.RadMenu radMenu1;
+        private Telerik.WinControls.UI.RadMenuItem radMenuItem2;
+        private Telerik.WinControls.UI.RadMenuItem radMenuBtnAgregarUsuario;
+        private Telerik.WinControls.UI.RadMenuItem radMenuItem5;
+        private Telerik.WinControls.UI.RadMenuItem radMenuItem1;
+        private Telerik.WinControls.UI.RadMenuItem radBtnReports;
+
+        private Telerik.WinControls.Themes.MaterialTheme materialTheme1;
 
         private Telerik.WinControls.UI.RadButton radButton1;
 
