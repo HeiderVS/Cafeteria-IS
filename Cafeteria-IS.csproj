@@ -45,11 +45,23 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Telerik.WinControls, Version=2021.3.1123.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.GridView, Version=2021.3.1123.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e">
+      <HintPath>..\..\..\Program Files (x86)\Progress\Telerik UI for WinForms R3 2021\Bin40\Telerik.WinControls.GridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadDock, Version=2021.3.1123.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e">
+      <HintPath>..\..\..\Program Files (x86)\Progress\Telerik UI for WinForms R3 2021\Bin40\Telerik.WinControls.RadDock.dll</HintPath>
+    </Reference>
     <Reference Include="Telerik.WinControls.Themes.Aqua, Version=2021.3.1123.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.UI, Version=2021.3.1123.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="TelerikCommon, Version=2021.3.1123.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminReportes.Designer.cs">
+      <DependentUpon>AdminReportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +76,9 @@
     <Compile Include="UsuariosAgregar.Designer.cs">
       <DependentUpon>UsuariosAgregar.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminReportes.resx">
+      <DependentUpon>AdminReportes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

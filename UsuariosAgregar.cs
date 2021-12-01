@@ -19,12 +19,17 @@ namespace Cafeteria_IS
 
         private void radMenuItem4_Click(object sender, EventArgs e)
         {
-
         }
 
         private void UsuariosAgregar_Load(object sender, EventArgs e)
         {
+        }
 
+        private void radBtnReports_Click(object sender, EventArgs e)
+        {
+            AdminReportes adminReportes = new AdminReportes();
+            adminReportes.Show();
+            this.Hide();
         }
     }
 }
