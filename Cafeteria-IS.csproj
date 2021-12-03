@@ -109,6 +109,9 @@
     <EmbeddedResource Include="AdminEditar.resx">
       <DependentUpon>AdminEditar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminEliminar.resx">
+      <DependentUpon>AdminEliminar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminReportes.resx">
       <DependentUpon>AdminReportes.cs</DependentUpon>
     </EmbeddedResource>

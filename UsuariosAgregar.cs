@@ -31,5 +31,10 @@ namespace Cafeteria_IS
             adminReportes.Show();
             this.Hide();
         }
+
+        private void radMenuItem5_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

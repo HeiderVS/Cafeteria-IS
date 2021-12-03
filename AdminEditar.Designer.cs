@@ -29,11 +29,12 @@ namespace Cafeteria_IS
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition4 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
             this.radMenu1 = new Telerik.WinControls.UI.RadMenu();
             this.radMenuItem2 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem4 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem5 = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuSeparatorItem1 = new Telerik.WinControls.UI.RadMenuSeparatorItem();
             this.radMenuItem1 = new Telerik.WinControls.UI.RadMenuItem();
             this.radBtnReports = new Telerik.WinControls.UI.RadMenuItem();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
@@ -41,12 +42,11 @@ namespace Cafeteria_IS
             this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
             this.txtNombre = new Telerik.WinControls.UI.RadTextBox();
-            this.radButton1 = new Telerik.WinControls.UI.RadButton();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
+            this.radButton1 = new Telerik.WinControls.UI.RadButton();
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.radButton2 = new Telerik.WinControls.UI.RadButton();
             this.radButton3 = new Telerik.WinControls.UI.RadButton();
-            this.radMenuSeparatorItem1 = new Telerik.WinControls.UI.RadMenuSeparatorItem();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             this.radLabel1.SuspendLayout();
@@ -56,8 +56,8 @@ namespace Cafeteria_IS
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre)).BeginInit();
             this.txtNombre.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton3)).BeginInit();
@@ -73,8 +73,9 @@ namespace Cafeteria_IS
             this.radMenuItem1,
             this.radBtnReports});
             this.radMenu1.Location = new System.Drawing.Point(0, 0);
+            this.radMenu1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radMenu1.Name = "radMenu1";
-            this.radMenu1.Size = new System.Drawing.Size(1086, 37);
+            this.radMenu1.Size = new System.Drawing.Size(1448, 45);
             this.radMenu1.TabIndex = 2;
             this.radMenu1.ThemeName = "Material";
             // 
@@ -87,18 +88,27 @@ namespace Cafeteria_IS
             this.radMenuItem2.Name = "radMenuItem2";
             this.radMenuItem2.Text = "Usuarios";
             this.radMenuItem2.UseCompatibleTextRendering = false;
+            this.radMenuItem2.Click += new System.EventHandler(this.radMenuItem2_Click);
             // 
             // radMenuItem4
             // 
             this.radMenuItem4.Name = "radMenuItem4";
             this.radMenuItem4.Text = "Editar";
             this.radMenuItem4.UseCompatibleTextRendering = false;
+            this.radMenuItem4.Click += new System.EventHandler(this.radMenuItem4_Click);
             // 
             // radMenuItem5
             // 
             this.radMenuItem5.Name = "radMenuItem5";
             this.radMenuItem5.Text = "Eliminar";
             this.radMenuItem5.UseCompatibleTextRendering = false;
+            this.radMenuItem5.Click += new System.EventHandler(this.radMenuItem5_Click);
+            // 
+            // radMenuSeparatorItem1
+            // 
+            this.radMenuSeparatorItem1.Name = "radMenuSeparatorItem1";
+            this.radMenuSeparatorItem1.Text = "radMenuSeparatorItem1";
+            this.radMenuSeparatorItem1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // radMenuItem1
             // 
@@ -116,9 +126,10 @@ namespace Cafeteria_IS
             // 
             this.radLabel1.Controls.Add(this.radLabel4);
             this.radLabel1.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel1.Location = new System.Drawing.Point(52, 127);
+            this.radLabel1.Location = new System.Drawing.Point(69, 156);
+            this.radLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radLabel1.Name = "radLabel1";
-            this.radLabel1.Size = new System.Drawing.Size(169, 56);
+            this.radLabel1.Size = new System.Drawing.Size(207, 68);
             this.radLabel1.TabIndex = 8;
             this.radLabel1.Text = "Usuarios";
             // 
@@ -126,9 +137,10 @@ namespace Cafeteria_IS
             // 
             this.radLabel4.BackColor = System.Drawing.Color.Transparent;
             this.radLabel4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel4.Location = new System.Drawing.Point(3, 50);
+            this.radLabel4.Location = new System.Drawing.Point(4, 62);
+            this.radLabel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radLabel4.Name = "radLabel4";
-            this.radLabel4.Size = new System.Drawing.Size(75, 30);
+            this.radLabel4.Size = new System.Drawing.Size(91, 36);
             this.radLabel4.TabIndex = 9;
             this.radLabel4.Text = "Usuario";
             // 
@@ -136,21 +148,23 @@ namespace Cafeteria_IS
             // 
             this.radLabel5.BackColor = System.Drawing.Color.Transparent;
             this.radLabel5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel5.Location = new System.Drawing.Point(52, 180);
+            this.radLabel5.Location = new System.Drawing.Point(69, 222);
+            this.radLabel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radLabel5.Name = "radLabel5";
-            this.radLabel5.Size = new System.Drawing.Size(494, 24);
+            this.radLabel5.Size = new System.Drawing.Size(607, 29);
             this.radLabel5.TabIndex = 10;
             this.radLabel5.Text = "Edite o reestablesca el accesos a los miembros de su equipo de trabajo.";
             // 
             // radGridView1
             // 
-            this.radGridView1.Location = new System.Drawing.Point(55, 315);
+            this.radGridView1.Location = new System.Drawing.Point(73, 388);
+            this.radGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             // 
             // 
             // 
-            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition4;
+            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition3;
             this.radGridView1.Name = "radGridView1";
-            this.radGridView1.Size = new System.Drawing.Size(839, 225);
+            this.radGridView1.Size = new System.Drawing.Size(1119, 277);
             this.radGridView1.TabIndex = 11;
             this.radGridView1.ThemeName = "Material";
             // 
@@ -160,35 +174,39 @@ namespace Cafeteria_IS
             this.txtNombre.BackColor = System.Drawing.Color.White;
             this.txtNombre.Controls.Add(this.radLabel2);
             this.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNombre.Location = new System.Drawing.Point(55, 249);
+            this.txtNombre.Location = new System.Drawing.Point(73, 306);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(172, 36);
+            this.txtNombre.Size = new System.Drawing.Size(229, 44);
             this.txtNombre.TabIndex = 12;
+            // 
+            // radLabel2
+            // 
+            this.radLabel2.Location = new System.Drawing.Point(4, 52);
+            this.radLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radLabel2.Name = "radLabel2";
+            this.radLabel2.Size = new System.Drawing.Size(29, 22);
+            this.radLabel2.TabIndex = 14;
+            this.radLabel2.Text = "(ID)";
             // 
             // radButton1
             // 
             this.radButton1.BackColor = System.Drawing.Color.Navy;
             this.radButton1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.radButton1.Location = new System.Drawing.Point(256, 249);
+            this.radButton1.Location = new System.Drawing.Point(341, 306);
+            this.radButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radButton1.Name = "radButton1";
-            this.radButton1.Size = new System.Drawing.Size(155, 36);
+            this.radButton1.Size = new System.Drawing.Size(207, 44);
             this.radButton1.TabIndex = 13;
             this.radButton1.Text = "Buscar Empleado";
             this.radButton1.ThemeName = "Material";
             // 
-            // radLabel2
-            // 
-            this.radLabel2.Location = new System.Drawing.Point(3, 42);
-            this.radLabel2.Name = "radLabel2";
-            this.radLabel2.Size = new System.Drawing.Size(24, 18);
-            this.radLabel2.TabIndex = 14;
-            this.radLabel2.Text = "(ID)";
-            // 
             // radLabel3
             // 
-            this.radLabel3.Location = new System.Drawing.Point(58, 288);
+            this.radLabel3.Location = new System.Drawing.Point(77, 354);
+            this.radLabel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radLabel3.Name = "radLabel3";
-            this.radLabel3.Size = new System.Drawing.Size(24, 18);
+            this.radLabel3.Size = new System.Drawing.Size(29, 22);
             this.radLabel3.TabIndex = 14;
             this.radLabel3.Text = "(ID)";
             // 
@@ -196,9 +214,10 @@ namespace Cafeteria_IS
             // 
             this.radButton2.BackColor = System.Drawing.Color.Navy;
             this.radButton2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.radButton2.Location = new System.Drawing.Point(359, 555);
+            this.radButton2.Location = new System.Drawing.Point(479, 683);
+            this.radButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radButton2.Name = "radButton2";
-            this.radButton2.Size = new System.Drawing.Size(174, 36);
+            this.radButton2.Size = new System.Drawing.Size(232, 44);
             this.radButton2.TabIndex = 15;
             this.radButton2.Text = "Nuevas Credenciales";
             this.radButton2.ThemeName = "Material";
@@ -207,25 +226,20 @@ namespace Cafeteria_IS
             // 
             this.radButton3.BackColor = System.Drawing.Color.Navy;
             this.radButton3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.radButton3.Location = new System.Drawing.Point(553, 555);
+            this.radButton3.Location = new System.Drawing.Point(737, 683);
+            this.radButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radButton3.Name = "radButton3";
-            this.radButton3.Size = new System.Drawing.Size(174, 36);
+            this.radButton3.Size = new System.Drawing.Size(232, 44);
             this.radButton3.TabIndex = 16;
             this.radButton3.Text = "Editar";
             this.radButton3.ThemeName = "Material";
             // 
-            // radMenuSeparatorItem1
-            // 
-            this.radMenuSeparatorItem1.Name = "radMenuSeparatorItem1";
-            this.radMenuSeparatorItem1.Text = "radMenuSeparatorItem1";
-            this.radMenuSeparatorItem1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // AdminEditar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1086, 668);
+            this.ClientSize = new System.Drawing.Size(1448, 822);
             this.Controls.Add(this.radButton3);
             this.Controls.Add(this.radButton2);
             this.Controls.Add(this.radLabel3);
@@ -235,6 +249,7 @@ namespace Cafeteria_IS
             this.Controls.Add(this.radLabel5);
             this.Controls.Add(this.radLabel1);
             this.Controls.Add(this.radMenu1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AdminEditar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminEditar";
@@ -250,8 +265,8 @@ namespace Cafeteria_IS
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre)).EndInit();
             this.txtNombre.ResumeLayout(false);
             this.txtNombre.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton3)).EndInit();
