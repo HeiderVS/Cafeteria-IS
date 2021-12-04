@@ -31,7 +31,7 @@ namespace Cafeteria_IS
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition4 = new Telerik.WinControls.UI.TableViewDefinition();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
@@ -47,6 +47,7 @@ namespace Cafeteria_IS
             this.radMenuItem5 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem1 = new Telerik.WinControls.UI.RadMenuItem();
             this.radBtnReports = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuItem3 = new Telerik.WinControls.UI.RadMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
@@ -85,7 +86,7 @@ namespace Cafeteria_IS
             // 
             // 
             // 
-            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition4;
             this.radGridView1.Name = "radGridView1";
             this.radGridView1.Size = new System.Drawing.Size(975, 471);
             this.radGridView1.TabIndex = 2;
@@ -163,10 +164,12 @@ namespace Cafeteria_IS
             // 
             this.radMenuItem2.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radMenuBtnAgregarUsuario,
-            this.radMenuItem5});
+            this.radMenuItem5,
+            this.radMenuItem3});
             this.radMenuItem2.Name = "radMenuItem2";
             this.radMenuItem2.Text = "Usuarios";
             this.radMenuItem2.UseCompatibleTextRendering = false;
+            this.radMenuItem2.Click += new System.EventHandler(this.radMenuItem2_Click);
             // 
             // radMenuBtnAgregarUsuario
             // 
@@ -180,6 +183,7 @@ namespace Cafeteria_IS
             this.radMenuItem5.Name = "radMenuItem5";
             this.radMenuItem5.Text = "Eliminar";
             this.radMenuItem5.UseCompatibleTextRendering = false;
+            this.radMenuItem5.Click += new System.EventHandler(this.radMenuItem5_Click);
             // 
             // radMenuItem1
             // 
@@ -192,6 +196,12 @@ namespace Cafeteria_IS
             this.radBtnReports.Name = "radBtnReports";
             this.radBtnReports.Text = "Reportes";
             this.radBtnReports.UseCompatibleTextRendering = false;
+            // 
+            // radMenuItem3
+            // 
+            this.radMenuItem3.Name = "radMenuItem3";
+            this.radMenuItem3.Text = "Agregar";
+            this.radMenuItem3.Click += new System.EventHandler(this.radMenuItem3_Click);
             // 
             // AdminReportes
             // 
@@ -250,5 +260,7 @@ namespace Cafeteria_IS
         private Telerik.WinControls.UI.RadLabel radLabel1;
 
         #endregion
+
+        private Telerik.WinControls.UI.RadMenuItem radMenuItem3;
     }
 }

@@ -24,9 +24,7 @@ namespace Cafeteria_IS
 
         private void radMenuItem2_Click(object sender, EventArgs e)
         {
-            UsuariosAgregar frm = new UsuariosAgregar();
-            frm.Show();
-            this.Hide();
+            
         }
 
         private void radMenuItem4_Click(object sender, EventArgs e)
@@ -39,6 +37,20 @@ namespace Cafeteria_IS
         private void radMenuItem5_Click(object sender, EventArgs e)
         {
             AdminEliminar frm = new AdminEliminar();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void radBtnReports_Click(object sender, EventArgs e)
+        {
+            AdminReportes adminReportes = new AdminReportes();
+            adminReportes.Show();
+            this.Hide();
+        }
+
+        private void radMenuItem3_Click(object sender, EventArgs e)
+        {
+            UsuariosAgregar frm = new UsuariosAgregar();
             frm.Show();
             this.Hide();
         }
