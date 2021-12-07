@@ -135,6 +135,8 @@ namespace Cafeteria_IS
             this.txtApPaterno.Name = "txtApPaterno";
             this.txtApPaterno.Size = new System.Drawing.Size(172, 29);
             this.txtApPaterno.TabIndex = 12;
+            this.txtApPaterno.TextChanged += new System.EventHandler(this.txtApPaterno_TextChanged);
+            this.txtApPaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApPaterno_KeyPress);
             // 
             // txtNombre
             // 
@@ -145,6 +147,7 @@ namespace Cafeteria_IS
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(172, 29);
             this.txtNombre.TabIndex = 11;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // radLabel2
             // 
@@ -168,6 +171,7 @@ namespace Cafeteria_IS
             this.btnRegistrarUsuario.TabIndex = 10;
             this.btnRegistrarUsuario.Text = "Registrar";
             this.btnRegistrarUsuario.Visible = false;
+            this.btnRegistrarUsuario.Click += new System.EventHandler(this.btnRegistrarUsuario_Click);
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnRegistrarUsuario.GetChildAt(0))).ImageAlignment = System.Drawing.ContentAlignment.BottomCenter;
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnRegistrarUsuario.GetChildAt(0))).Text = "Registrar";
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnRegistrarUsuario.GetChildAt(0))).EnableBorderHighlight = true;
@@ -254,6 +258,7 @@ namespace Cafeteria_IS
             this.txtApMaterno.Name = "txtApMaterno";
             this.txtApMaterno.Size = new System.Drawing.Size(172, 29);
             this.txtApMaterno.TabIndex = 13;
+            this.txtApMaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApMaterno_KeyPress);
             // 
             // txtNomUsuario
             // 
@@ -306,7 +311,7 @@ namespace Cafeteria_IS
             this.radBtnReports});
             this.radMenu1.Location = new System.Drawing.Point(0, 0);
             this.radMenu1.Name = "radMenu1";
-            this.radMenu1.Size = new System.Drawing.Size(1134, 37);
+            this.radMenu1.Size = new System.Drawing.Size(1134, 35);
             this.radMenu1.TabIndex = 1;
             this.radMenu1.ThemeName = "Material";
             // 

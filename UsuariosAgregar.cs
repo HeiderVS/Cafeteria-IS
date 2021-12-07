@@ -39,7 +39,7 @@ namespace Cafeteria_IS
         {
             AdminEliminar frm = new AdminEliminar();
             frm.Show();
-            this.Show();
+            this.Hide();
 
         }
 
@@ -59,6 +59,7 @@ namespace Cafeteria_IS
         {
             try
             {
+                string NomU = Convert.ToString(txtNombre.Text).Substring(0, 3) + Convert.ToString(txtApPaterno.Text).Substring(0,3) + Convert.ToString(txtApMaterno.Text).Substring(0,3);
                 BorrarMensajesError();
                 if (ValidarCampos())
                 {
@@ -70,6 +71,8 @@ namespace Cafeteria_IS
                     btnRegistrarUsuario.Visible = true;
                     btnAceptar.Visible = false;
                     btnCancelarAgrUsuario.Visible = true;
+
+                    txtNomUsuario.Text = NomU;
 
                     
                 }
@@ -128,9 +131,86 @@ namespace Cafeteria_IS
                 btnCancelarAgrUsuario.Visible = false;
                 txtNomUsuario.Clear();
                 txtContraAgregarUsuario.Clear();
+                txtNomUsuario.Clear();
+                txtContraAgregarUsuario.Clear();
 
             }
 
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten letras en este campo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtApPaterno_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtApPaterno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten letras en este campo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtApMaterno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten letras en este campo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void btnRegistrarUsuario_Click(object sender, EventArgs e)
+        {
+            MessageBoxButtons botones = MessageBoxButtons.OKCancel;
+            DialogResult dr = MessageBox.Show("Confirmacion para guardar al empleado", "Confirmar", botones, MessageBoxIcon.Warning);
+            if (dr == DialogResult.OK)
+            {
+               
+
+                MessageBox.Show("Empleado agregado con exito ("+Convert.ToString(txtNomUsuario.Text)+")","Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtNombre.Clear();
+                txtApPaterno.Clear();
+                txtApMaterno.Clear();
+                lbl1.Visible = false;
+                lbl2.Visible = false;
+                txtNomUsuario.Visible = false;
+                txtContraAgregarUsuario.Visible = false;
+                btnRegistrarUsuario.Visible = false;
+                btnAceptar.Visible = true;
+                btnCancelarAgrUsuario.Visible = false;
+                txtNomUsuario.Clear();
+                txtContraAgregarUsuario.Clear();
+
+            }
+            else
+            {
+                txtNombre.Clear();
+                txtApPaterno.Clear();
+                txtApMaterno.Clear();
+                lbl1.Visible = false;
+                lbl2.Visible = false;
+                txtNomUsuario.Visible = false;
+                txtContraAgregarUsuario.Visible = false;
+                btnRegistrarUsuario.Visible = false;
+                btnAceptar.Visible = true;
+                btnCancelarAgrUsuario.Visible = false;
+                txtNomUsuario.Clear();
+                txtContraAgregarUsuario.Clear();
+            }
         }
 
         //MOSTRAR SEÑAL DE ERRROR EN EL TXBOX SI NO TIENE EL FORMATO CORRECTO USANDO EL EVENTO "VALIDATING"
@@ -174,6 +254,6 @@ namespace Cafeteria_IS
 
 
 
-        
+
     }
 }
