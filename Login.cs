@@ -19,12 +19,10 @@ namespace Cafeteria_IS
 
         private void Login_Load(object sender, EventArgs e)
         {
-
         }
 
         private void radPictureBox1_ImageLoaded(object sender, EventArgs e)
         {
-
         }
 
         private void radTextBox1_TextChanged(object sender, EventArgs e)
@@ -35,21 +33,17 @@ namespace Cafeteria_IS
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
             UsuariosAgregar frm = new UsuariosAgregar();
-                frm.Show();
+            frm.Show();
             this.Hide();
         }
 
-        private void radRadioButton1_ToggleStateChanged(object sender, Telerik.WinControls.UI.StateChangedEventArgs args)
+        private void radRadioButton1_ToggleStateChanged(object sender,
+            Telerik.WinControls.UI.StateChangedEventArgs args)
         {
-            
             if (btnMostrarContra.IsChecked == true)
             {
-           
                 radTextBoxContraseña.PasswordChar = '\0';
-                
             }
-            
-           
         }
     }
 }

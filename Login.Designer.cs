@@ -24,8 +24,8 @@ namespace Cafeteria_IS
         #region Código generado por el Diseñador de Windows Forms
 
         /// <summary>
-        /// Método necesario para admitir el Diseñador. No se puede modificar
-        /// el contenido de este método con el editor de código.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -39,30 +39,32 @@ namespace Cafeteria_IS
             this.radTextBoxUsuario = new Telerik.WinControls.UI.RadTextBox();
             this.radTextBoxContraseña = new Telerik.WinControls.UI.RadTextBox();
             this.btnMostrarContra = new Telerik.WinControls.UI.RadRadioButton();
-            ((System.ComponentModel.ISupportInitialize)(this.radPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnIniciarSesion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBoxUsuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBoxContraseña)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMostrarContra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radLabel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radLabel3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.btnIniciarSesion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radTextBoxUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radTextBoxContraseña)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.btnMostrarContra)).BeginInit();
             this.SuspendLayout();
             // 
             // radPictureBox1
             // 
-            this.radPictureBox1.DefaultImage = ((System.Drawing.Image)(resources.GetObject("radPictureBox1.DefaultImage")));
-            this.radPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("radPictureBox1.Image")));
+            this.radPictureBox1.DefaultImage = ((System.Drawing.Image) (resources.GetObject("radPictureBox1.DefaultImage")));
+            this.radPictureBox1.ForeColor = System.Drawing.Color.White;
+            this.radPictureBox1.Image = ((System.Drawing.Image) (resources.GetObject("radPictureBox1.Image")));
             this.radPictureBox1.ImageLayout = Telerik.WinControls.UI.RadImageLayout.Stretch;
-            this.radPictureBox1.Location = new System.Drawing.Point(469, 3);
+            this.radPictureBox1.Location = new System.Drawing.Point(493, -2);
             this.radPictureBox1.Name = "radPictureBox1";
-            this.radPictureBox1.Size = new System.Drawing.Size(536, 861);
+            this.radPictureBox1.ShowBackground = true;
+            this.radPictureBox1.Size = new System.Drawing.Size(515, 864);
             this.radPictureBox1.TabIndex = 0;
             this.radPictureBox1.ImageLoaded += new System.EventHandler(this.radPictureBox1_ImageLoaded);
             // 
             // radLabel1
             // 
-            this.radLabel1.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel1.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.radLabel1.Location = new System.Drawing.Point(94, 258);
             this.radLabel1.Name = "radLabel1";
             this.radLabel1.Size = new System.Drawing.Size(237, 56);
@@ -72,7 +74,7 @@ namespace Cafeteria_IS
             // radLabel2
             // 
             this.radLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.radLabel2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.radLabel2.Location = new System.Drawing.Point(94, 355);
             this.radLabel2.Name = "radLabel2";
             this.radLabel2.Size = new System.Drawing.Size(75, 30);
@@ -82,7 +84,7 @@ namespace Cafeteria_IS
             // radLabel3
             // 
             this.radLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.radLabel3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.radLabel3.Location = new System.Drawing.Point(94, 428);
             this.radLabel3.Name = "radLabel3";
             this.radLabel3.Size = new System.Drawing.Size(106, 30);
@@ -100,10 +102,10 @@ namespace Cafeteria_IS
             this.btnIniciarSesion.TabIndex = 4;
             this.btnIniciarSesion.Text = "Iniciar Sesion";
             this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnIniciarSesion.GetChildAt(0))).ImageAlignment = System.Drawing.ContentAlignment.BottomCenter;
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnIniciarSesion.GetChildAt(0))).Text = "Iniciar Sesion";
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnIniciarSesion.GetChildAt(0))).EnableBorderHighlight = true;
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnIniciarSesion.GetChildAt(0))).BorderHighlightColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(32)))), ((int)(((byte)(255)))));
+            ((Telerik.WinControls.UI.RadButtonElement) (this.btnIniciarSesion.GetChildAt(0))).ImageAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            ((Telerik.WinControls.UI.RadButtonElement) (this.btnIniciarSesion.GetChildAt(0))).Text = "Iniciar Sesion";
+            ((Telerik.WinControls.UI.RadButtonElement) (this.btnIniciarSesion.GetChildAt(0))).EnableBorderHighlight = true;
+            ((Telerik.WinControls.UI.RadButtonElement) (this.btnIniciarSesion.GetChildAt(0))).BorderHighlightColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (32)))), ((int) (((byte) (255)))));
             // 
             // radTextBoxUsuario
             // 
@@ -152,17 +154,16 @@ namespace Cafeteria_IS
             this.Name = "Login";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Login_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.radPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnIniciarSesion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBoxUsuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBoxContraseña)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMostrarContra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radLabel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radLabel3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.btnIniciarSesion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radTextBoxUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radTextBoxContraseña)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.btnMostrarContra)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
