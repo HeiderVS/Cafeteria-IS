@@ -73,18 +73,23 @@ namespace Cafeteria_IS
                 
                 string NomU = Convert.ToString(txtNombre.Text).Substring(0, 3) + Convert.ToString(txtApPaterno.Text).Substring(0, 3) + Convert.ToString(txtApMaterno.Text).Substring(0, 3);
                 txtNomUsuario.Text = NomU;
-                //Generando Numeros Aleatorios
-                int i;
-                int[] vector = new int[5];
-                Random random = new Random();
-                for (i=0;i<vector.Length;i++)
-                {
-                    vector[i] = random.Next(0, 11);
-                }
 
-      
-                string Contra = Convert.ToString(txtNombre.Text).Substring(0,1) + Convert.ToString(txtApPaterno.Text).Substring(0,1) + Convert.ToString(txtApMaterno.Text).Substring(0,1)+"-"+random;
-                txtContraAgregarUsuario.Text = Contra
+                //Generando Contraseña Aleatoria
+                Random rdn = new Random();
+                string caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890=+/?*&#";
+                int longitud = caracteres.Length;
+                char letra;
+                int longitudContrasenia = 10;
+                string contraseniaAleatoria = string.Empty;
+                for (int i = 0; i < longitudContrasenia; i++)
+                {
+                    letra = caracteres[rdn.Next(longitud)];
+                    contraseniaAleatoria += letra.ToString();
+                }
+                txtContraAgregarUsuario.Text = contraseniaAleatoria;
+                //-----------------------------------------------------------------------
+
+
 
             }
                 ValidarCampos();
@@ -186,12 +191,12 @@ namespace Cafeteria_IS
         private void btnRegistrarUsuario_Click(object sender, EventArgs e)
         {
             MessageBoxButtons botones = MessageBoxButtons.OKCancel;
-            DialogResult dr = MessageBox.Show("Confirmacion para guardar al empleado", "Confirmar", botones, MessageBoxIcon.Warning);
+            DialogResult dr = MessageBox.Show("Desea Agregar este Empleado?: ("+txtNomUsuario.Text+")", "Confirmar", botones, MessageBoxIcon.Warning);
             if (dr == DialogResult.OK)
             {
                
 
-                MessageBox.Show("Empleado agregado con exito ("+Convert.ToString(txtNomUsuario.Text)+")","Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Empleado agregado con exito ("+txtNomUsuario.Text+")","Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtNombre.Clear();
                 txtApPaterno.Clear();
                 txtApMaterno.Clear();

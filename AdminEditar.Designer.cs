@@ -35,6 +35,7 @@ namespace Cafeteria_IS
             this.radMenuItem4 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem5 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuSeparatorItem1 = new Telerik.WinControls.UI.RadMenuSeparatorItem();
+            this.radMenuItem3 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem1 = new Telerik.WinControls.UI.RadMenuItem();
             this.radBtnReports = new Telerik.WinControls.UI.RadMenuItem();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
@@ -47,7 +48,6 @@ namespace Cafeteria_IS
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.radButton2 = new Telerik.WinControls.UI.RadButton();
             this.radButton3 = new Telerik.WinControls.UI.RadButton();
-            this.radMenuItem3 = new Telerik.WinControls.UI.RadMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             this.radLabel1.SuspendLayout();
@@ -110,6 +110,12 @@ namespace Cafeteria_IS
             this.radMenuSeparatorItem1.Name = "radMenuSeparatorItem1";
             this.radMenuSeparatorItem1.Text = "radMenuSeparatorItem1";
             this.radMenuSeparatorItem1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // radMenuItem3
+            // 
+            this.radMenuItem3.Name = "radMenuItem3";
+            this.radMenuItem3.Text = "Agregar";
+            this.radMenuItem3.Click += new System.EventHandler(this.radMenuItem3_Click);
             // 
             // radMenuItem1
             // 
@@ -214,6 +220,7 @@ namespace Cafeteria_IS
             this.radButton2.TabIndex = 15;
             this.radButton2.Text = "Nuevas Credenciales";
             this.radButton2.ThemeName = "Material";
+            this.radButton2.Click += new System.EventHandler(this.radButton2_Click);
             // 
             // radButton3
             // 
@@ -225,12 +232,6 @@ namespace Cafeteria_IS
             this.radButton3.TabIndex = 16;
             this.radButton3.Text = "Editar";
             this.radButton3.ThemeName = "Material";
-            // 
-            // radMenuItem3
-            // 
-            this.radMenuItem3.Name = "radMenuItem3";
-            this.radMenuItem3.Text = "Agregar";
-            this.radMenuItem3.Click += new System.EventHandler(this.radMenuItem3_Click);
             // 
             // AdminEditar
             // 

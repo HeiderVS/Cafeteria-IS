@@ -54,5 +54,30 @@ namespace Cafeteria_IS
             frm.Show();
             this.Hide();
         }
+
+        private void radButton2_Click(object sender, EventArgs e)
+        {
+            MessageBoxButtons botones = MessageBoxButtons.YesNo;
+            DialogResult dr = MessageBox.Show("Desea generar nuevas credenciales para este empleado?", "Confirmacion",botones, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                //Generando Contraseña Aleatoria
+                Random rdn = new Random();
+                string caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890=+/?*&#";
+                int longitud = caracteres.Length;
+                char letra;
+                int longitudContrasenia = 10;
+                string contraseniaAleatoria = string.Empty;
+                for (int i = 0; i < longitudContrasenia; i++)
+                {
+                    letra = caracteres[rdn.Next(longitud)];
+                    contraseniaAleatoria += letra.ToString();
+                }
+                //-----------------------------------------------------------------------
+                MessageBox.Show("Contraseña Generada con exito", "Contraseña Generada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Clipboard.SetDataObject(contraseniaAleatoria, true);
+                MessageBox.Show("Su nueva Contraseña es: " + contraseniaAleatoria+"\n\n Contraseña copiada al portapapeles", "Nueva Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

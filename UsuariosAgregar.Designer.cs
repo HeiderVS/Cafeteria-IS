@@ -265,7 +265,7 @@ namespace Cafeteria_IS
             this.txtNomUsuario.AutoSize = false;
             this.txtNomUsuario.BackColor = System.Drawing.Color.White;
             this.txtNomUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNomUsuario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomUsuario.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomUsuario.ForeColor = System.Drawing.Color.DimGray;
             this.txtNomUsuario.Location = new System.Drawing.Point(65, 533);
             this.txtNomUsuario.Name = "txtNomUsuario";
@@ -279,10 +279,11 @@ namespace Cafeteria_IS
             this.txtContraAgregarUsuario.AutoSize = false;
             this.txtContraAgregarUsuario.BackColor = System.Drawing.Color.White;
             this.txtContraAgregarUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtContraAgregarUsuario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraAgregarUsuario.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraAgregarUsuario.ForeColor = System.Drawing.Color.DimGray;
             this.txtContraAgregarUsuario.Location = new System.Drawing.Point(65, 616);
             this.txtContraAgregarUsuario.Name = "txtContraAgregarUsuario";
+            this.txtContraAgregarUsuario.ReadOnly = true;
             this.txtContraAgregarUsuario.Size = new System.Drawing.Size(172, 29);
             this.txtContraAgregarUsuario.TabIndex = 15;
             this.txtContraAgregarUsuario.Visible = false;
