@@ -58,7 +58,7 @@ namespace Cafeteria_IS
         private void radButton2_Click(object sender, EventArgs e)
         {
             MessageBoxButtons botones = MessageBoxButtons.YesNo;
-            DialogResult dr = MessageBox.Show("Desea generar nuevas credenciales para este empleado?", "Confirmacion",botones, MessageBoxIcon.Warning);
+            DialogResult dr = MessageBox.Show("Desea generar una nueva contraseña para este empleado?", "Confirmacion",botones, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {
                 //Generando Contraseña Aleatoria
@@ -77,7 +77,14 @@ namespace Cafeteria_IS
                 MessageBox.Show("Contraseña Generada con exito", "Contraseña Generada", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Clipboard.SetDataObject(contraseniaAleatoria, true);
                 MessageBox.Show("Su nueva Contraseña es: " + contraseniaAleatoria+"\n\n Contraseña copiada al portapapeles", "Nueva Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
+        }
+
+        private void btnEditarUsuarioExistente_Click(object sender, EventArgs e)
+        {
+            Editar_Empleado_Existente frm = new Editar_Empleado_Existente();
+            frm.Show();
         }
     }
 }
