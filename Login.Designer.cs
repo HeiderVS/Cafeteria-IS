@@ -36,16 +36,15 @@ namespace Cafeteria_IS
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.btnIniciarSesion = new Telerik.WinControls.UI.RadButton();
             this.radTextBoxUsuario = new Telerik.WinControls.UI.RadTextBox();
-            this.radTextBoxContraseña = new Telerik.WinControls.UI.RadTextBox();
-            this.btnMostrarContra = new Telerik.WinControls.UI.RadRadioButton();
+            this.txtContra = new Telerik.WinControls.UI.RadTextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.radPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnIniciarSesion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radTextBoxUsuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBoxContraseña)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMostrarContra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtContra)).BeginInit();
             this.SuspendLayout();
             // 
             // radPictureBox1
@@ -114,25 +113,27 @@ namespace Cafeteria_IS
             this.radTextBoxUsuario.Size = new System.Drawing.Size(172, 29);
             this.radTextBoxUsuario.TabIndex = 5;
             // 
-            // radTextBoxContraseña
+            // txtContra
             // 
-            this.radTextBoxContraseña.AutoSize = false;
-            this.radTextBoxContraseña.BackColor = System.Drawing.Color.White;
-            this.radTextBoxContraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.radTextBoxContraseña.Location = new System.Drawing.Point(94, 464);
-            this.radTextBoxContraseña.Name = "radTextBoxContraseña";
-            this.radTextBoxContraseña.Size = new System.Drawing.Size(172, 29);
-            this.radTextBoxContraseña.TabIndex = 6;
-            this.radTextBoxContraseña.TextChanged += new System.EventHandler(this.radTextBox1_TextChanged);
+            this.txtContra.AutoSize = false;
+            this.txtContra.BackColor = System.Drawing.Color.White;
+            this.txtContra.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtContra.Location = new System.Drawing.Point(94, 464);
+            this.txtContra.Name = "txtContra";
+            this.txtContra.Size = new System.Drawing.Size(172, 29);
+            this.txtContra.TabIndex = 6;
+            this.txtContra.TextChanged += new System.EventHandler(this.radTextBox1_TextChanged);
             // 
-            // btnMostrarContra
+            // checkBox1
             // 
-            this.btnMostrarContra.Location = new System.Drawing.Point(116, 499);
-            this.btnMostrarContra.Name = "btnMostrarContra";
-            this.btnMostrarContra.Size = new System.Drawing.Size(119, 18);
-            this.btnMostrarContra.TabIndex = 7;
-            this.btnMostrarContra.Text = "Mostrar Contraseña";
-            this.btnMostrarContra.ToggleStateChanged += new Telerik.WinControls.UI.StateChangedEventHandler(this.radRadioButton1_ToggleStateChanged);
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(125, 499);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(118, 17);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "Mostrar Contraseña";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // Login
             // 
@@ -140,8 +141,8 @@ namespace Cafeteria_IS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1008, 845);
-            this.Controls.Add(this.btnMostrarContra);
-            this.Controls.Add(this.radTextBoxContraseña);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.txtContra);
             this.Controls.Add(this.radTextBoxUsuario);
             this.Controls.Add(this.radLabel2);
             this.Controls.Add(this.btnIniciarSesion);
@@ -158,8 +159,7 @@ namespace Cafeteria_IS
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnIniciarSesion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radTextBoxUsuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBoxContraseña)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMostrarContra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtContra)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,8 +172,8 @@ namespace Cafeteria_IS
         private Telerik.WinControls.UI.RadLabel radLabel3;
         private Telerik.WinControls.UI.RadButton btnIniciarSesion;
         private Telerik.WinControls.UI.RadTextBox radTextBoxUsuario;
-        private Telerik.WinControls.UI.RadTextBox radTextBoxContraseña;
-        private Telerik.WinControls.UI.RadRadioButton btnMostrarContra;
+        private Telerik.WinControls.UI.RadTextBox txtContra;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 
