@@ -48,6 +48,7 @@ namespace Cafeteria_IS
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.radButton2 = new Telerik.WinControls.UI.RadButton();
             this.btnEditarUsuarioExistente = new Telerik.WinControls.UI.RadButton();
+            this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             this.radLabel1.SuspendLayout();
@@ -62,6 +63,7 @@ namespace Cafeteria_IS
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditarUsuarioExistente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
             this.SuspendLayout();
             // 
             // radMenu1
@@ -182,6 +184,7 @@ namespace Cafeteria_IS
             this.txtBuscador.Name = "txtBuscador";
             this.txtBuscador.Size = new System.Drawing.Size(172, 36);
             this.txtBuscador.TabIndex = 12;
+            this.txtBuscador.TextChanged += new System.EventHandler(this.txtBuscador_TextChanged);
             // 
             // radLabel2
             // 
@@ -234,12 +237,23 @@ namespace Cafeteria_IS
             this.btnEditarUsuarioExistente.ThemeName = "Material";
             this.btnEditarUsuarioExistente.Click += new System.EventHandler(this.btnEditarUsuarioExistente_Click);
             // 
+            // radLabel6
+            // 
+            this.radLabel6.Font = new System.Drawing.Font("Segoe UI Historic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel6.ForeColor = System.Drawing.Color.DimGray;
+            this.radLabel6.Location = new System.Drawing.Point(15, 202);
+            this.radLabel6.Name = "radLabel6";
+            this.radLabel6.Size = new System.Drawing.Size(246, 21);
+            this.radLabel6.TabIndex = 20;
+            this.radLabel6.Text = "(Nombre de Usuario, Nombre , Apellido)";
+            // 
             // AdminEditar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(859, 543);
+            this.Controls.Add(this.radLabel6);
             this.Controls.Add(this.btnEditarUsuarioExistente);
             this.Controls.Add(this.radButton2);
             this.Controls.Add(this.radLabel3);
@@ -269,6 +283,7 @@ namespace Cafeteria_IS
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditarUsuarioExistente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,5 +309,6 @@ namespace Cafeteria_IS
         private Telerik.WinControls.UI.RadButton btnEditarUsuarioExistente;
         private Telerik.WinControls.UI.RadMenuSeparatorItem radMenuSeparatorItem1;
         private Telerik.WinControls.UI.RadMenuItem radMenuItem3;
+        private Telerik.WinControls.UI.RadLabel radLabel6;
     }
 }

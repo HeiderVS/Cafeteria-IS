@@ -73,7 +73,7 @@ namespace Cafeteria_IS
             this.radBtnReports});
             this.radMenu1.Location = new System.Drawing.Point(0, 0);
             this.radMenu1.Name = "radMenu1";
-            this.radMenu1.Size = new System.Drawing.Size(866, 23);
+            this.radMenu1.Size = new System.Drawing.Size(753, 23);
             this.radMenu1.TabIndex = 3;
             this.radMenu1.ThemeName = "Material";
             // 
@@ -135,7 +135,7 @@ namespace Cafeteria_IS
             this.txtNombre.BackColor = System.Drawing.Color.White;
             this.txtNombre.Controls.Add(this.radLabel2);
             this.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNombre.Location = new System.Drawing.Point(22, 178);
+            this.txtNombre.Location = new System.Drawing.Point(12, 118);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(172, 36);
             this.txtNombre.TabIndex = 13;
@@ -154,7 +154,7 @@ namespace Cafeteria_IS
             // 
             this.radButton1.BackColor = System.Drawing.Color.Navy;
             this.radButton1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.radButton1.Location = new System.Drawing.Point(224, 178);
+            this.radButton1.Location = new System.Drawing.Point(214, 118);
             this.radButton1.Name = "radButton1";
             this.radButton1.Size = new System.Drawing.Size(155, 36);
             this.radButton1.TabIndex = 14;
@@ -166,7 +166,7 @@ namespace Cafeteria_IS
             // 
             this.radLabel5.BackColor = System.Drawing.Color.Transparent;
             this.radLabel5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel5.Location = new System.Drawing.Point(22, 142);
+            this.radLabel5.Location = new System.Drawing.Point(12, 82);
             this.radLabel5.Name = "radLabel5";
             this.radLabel5.Size = new System.Drawing.Size(315, 24);
             this.radLabel5.TabIndex = 16;
@@ -176,7 +176,7 @@ namespace Cafeteria_IS
             // 
             this.radLabel1.Controls.Add(this.radLabel4);
             this.radLabel1.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel1.Location = new System.Drawing.Point(22, 89);
+            this.radLabel1.Location = new System.Drawing.Point(12, 29);
             this.radLabel1.Name = "radLabel1";
             this.radLabel1.Size = new System.Drawing.Size(169, 56);
             this.radLabel1.TabIndex = 15;
@@ -194,13 +194,13 @@ namespace Cafeteria_IS
             // 
             // radGridView1
             // 
-            this.radGridView1.Location = new System.Drawing.Point(22, 241);
+            this.radGridView1.Location = new System.Drawing.Point(12, 181);
             // 
             // 
             // 
             this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.radGridView1.Name = "radGridView1";
-            this.radGridView1.Size = new System.Drawing.Size(839, 225);
+            this.radGridView1.Size = new System.Drawing.Size(736, 225);
             this.radGridView1.TabIndex = 17;
             this.radGridView1.ThemeName = "Material";
             // 
@@ -208,7 +208,7 @@ namespace Cafeteria_IS
             // 
             this.radButton2.BackColor = System.Drawing.Color.Red;
             this.radButton2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.radButton2.Location = new System.Drawing.Point(384, 492);
+            this.radButton2.Location = new System.Drawing.Point(299, 424);
             this.radButton2.Name = "radButton2";
             this.radButton2.Size = new System.Drawing.Size(155, 36);
             this.radButton2.TabIndex = 18;
@@ -220,7 +220,7 @@ namespace Cafeteria_IS
             // 
             this.radLabel3.Font = new System.Drawing.Font("Segoe UI Historic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radLabel3.ForeColor = System.Drawing.Color.DimGray;
-            this.radLabel3.Location = new System.Drawing.Point(22, 217);
+            this.radLabel3.Location = new System.Drawing.Point(12, 157);
             this.radLabel3.Name = "radLabel3";
             this.radLabel3.Size = new System.Drawing.Size(246, 21);
             this.radLabel3.TabIndex = 19;
@@ -230,7 +230,7 @@ namespace Cafeteria_IS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(866, 682);
+            this.ClientSize = new System.Drawing.Size(753, 479);
             this.Controls.Add(this.radLabel3);
             this.Controls.Add(this.radButton2);
             this.Controls.Add(this.radGridView1);
@@ -243,6 +243,7 @@ namespace Cafeteria_IS
             this.Name = "AdminEliminar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminEliminar";
+            this.Load += new System.EventHandler(this.AdminEliminar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre)).EndInit();
             this.txtNombre.ResumeLayout(false);

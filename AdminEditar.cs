@@ -86,5 +86,10 @@ namespace Cafeteria_IS
             Editar_Empleado_Existente frm = new Editar_Empleado_Existente();
             frm.Show();
         }
+
+        private void txtBuscador_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
