@@ -56,5 +56,47 @@ namespace Cafeteria_IS
             frm.Show();
             this.Hide();
         }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Caracter no valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void radButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radButton2_Click(object sender, EventArgs e)
+        {
+            if (txtNombre.Text != "")
+            {
+                MessageBoxButtons botones = MessageBoxButtons.OKCancel;
+                DialogResult dr = MessageBox.Show("Esta seguro de eliminar este empleado?", "Confirmacion", botones, MessageBoxIcon.Warning);
+                if (dr == DialogResult.OK)
+                {
+                    MessageBox.Show("Empleado eliminado", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Campo vacio \n Llene los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdminEliminar_Load(object sender, EventArgs e)
+        {
+            if ()
+        }
     }
 }

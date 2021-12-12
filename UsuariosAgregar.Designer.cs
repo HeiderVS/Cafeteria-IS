@@ -135,6 +135,8 @@ namespace Cafeteria_IS
             this.txtApPaterno.Name = "txtApPaterno";
             this.txtApPaterno.Size = new System.Drawing.Size(172, 29);
             this.txtApPaterno.TabIndex = 12;
+            this.txtApPaterno.TextChanged += new System.EventHandler(this.txtApPaterno_TextChanged);
+            this.txtApPaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApPaterno_KeyPress);
             // 
             // txtNombre
             // 
@@ -145,6 +147,7 @@ namespace Cafeteria_IS
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(172, 29);
             this.txtNombre.TabIndex = 11;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // radLabel2
             // 
@@ -168,6 +171,7 @@ namespace Cafeteria_IS
             this.btnRegistrarUsuario.TabIndex = 10;
             this.btnRegistrarUsuario.Text = "Registrar";
             this.btnRegistrarUsuario.Visible = false;
+            this.btnRegistrarUsuario.Click += new System.EventHandler(this.btnRegistrarUsuario_Click);
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnRegistrarUsuario.GetChildAt(0))).ImageAlignment = System.Drawing.ContentAlignment.BottomCenter;
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnRegistrarUsuario.GetChildAt(0))).Text = "Registrar";
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnRegistrarUsuario.GetChildAt(0))).EnableBorderHighlight = true;
@@ -254,13 +258,15 @@ namespace Cafeteria_IS
             this.txtApMaterno.Name = "txtApMaterno";
             this.txtApMaterno.Size = new System.Drawing.Size(172, 29);
             this.txtApMaterno.TabIndex = 13;
+            this.txtApMaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApMaterno_KeyPress);
             // 
             // txtNomUsuario
             // 
             this.txtNomUsuario.AutoSize = false;
             this.txtNomUsuario.BackColor = System.Drawing.Color.White;
             this.txtNomUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNomUsuario.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtNomUsuario.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomUsuario.ForeColor = System.Drawing.Color.DimGray;
             this.txtNomUsuario.Location = new System.Drawing.Point(65, 533);
             this.txtNomUsuario.Name = "txtNomUsuario";
             this.txtNomUsuario.ReadOnly = true;
@@ -273,14 +279,15 @@ namespace Cafeteria_IS
             this.txtContraAgregarUsuario.AutoSize = false;
             this.txtContraAgregarUsuario.BackColor = System.Drawing.Color.White;
             this.txtContraAgregarUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtContraAgregarUsuario.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtContraAgregarUsuario.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraAgregarUsuario.ForeColor = System.Drawing.Color.DimGray;
             this.txtContraAgregarUsuario.Location = new System.Drawing.Point(65, 616);
             this.txtContraAgregarUsuario.Name = "txtContraAgregarUsuario";
-            this.txtContraAgregarUsuario.PasswordChar = '*';
             this.txtContraAgregarUsuario.ReadOnly = true;
             this.txtContraAgregarUsuario.Size = new System.Drawing.Size(172, 29);
             this.txtContraAgregarUsuario.TabIndex = 15;
             this.txtContraAgregarUsuario.Visible = false;
+            this.txtContraAgregarUsuario.TextChanged += new System.EventHandler(this.txtContraAgregarUsuario_TextChanged);
             // 
             // btnCancelarAgrUsuario
             // 
@@ -306,7 +313,7 @@ namespace Cafeteria_IS
             this.radBtnReports});
             this.radMenu1.Location = new System.Drawing.Point(0, 0);
             this.radMenu1.Name = "radMenu1";
-            this.radMenu1.Size = new System.Drawing.Size(1134, 37);
+            this.radMenu1.Size = new System.Drawing.Size(1134, 23);
             this.radMenu1.TabIndex = 1;
             this.radMenu1.ThemeName = "Material";
             // 

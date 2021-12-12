@@ -92,6 +92,12 @@
     <Compile Include="AdminReportes.Designer.cs">
       <DependentUpon>AdminReportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Editar Empleado Existente .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar Empleado Existente .Designer.cs">
+      <DependentUpon>Editar Empleado Existente .cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminReportes.resx">
       <DependentUpon>AdminReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar Empleado Existente .resx">
+      <DependentUpon>Editar Empleado Existente .cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
