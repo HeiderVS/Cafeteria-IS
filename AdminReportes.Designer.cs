@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel;
 
 namespace Cafeteria_IS
@@ -100,9 +101,10 @@ namespace Cafeteria_IS
             this.radDateReportStart.Size = new System.Drawing.Size(164, 36);
             this.radDateReportStart.TabIndex = 3;
             this.radDateReportStart.TabStop = false;
-            this.radDateReportStart.Text = "10 December 2021";
+            this.radDateReportStart.Text = "13 December 2021";
             this.radDateReportStart.ThemeName = "Material";
-            this.radDateReportStart.Value = System.DateTime.Today;
+            this.radDateReportStart.Value = new System.DateTime(2021, 12, 13, 0, 0, 0, 0);
+            this.radDateReportStart.MaxDate = DateTime.Today;
             this.radDateReportStart.ValueChanged += new System.EventHandler(this.radDateReportStart_ValueChanged);
             // 
             // radLabel3
@@ -134,6 +136,7 @@ namespace Cafeteria_IS
             this.radButton1.TabIndex = 6;
             this.radButton1.Text = "Generar reporte";
             this.radButton1.ThemeName = "Material";
+            this.radButton1.Click += new System.EventHandler(this.radButton1_Click);
             // 
             // radMenu1
             // 
@@ -194,9 +197,11 @@ namespace Cafeteria_IS
             this.radDateReportEnd.Size = new System.Drawing.Size(164, 36);
             this.radDateReportEnd.TabIndex = 8;
             this.radDateReportEnd.TabStop = false;
-            this.radDateReportEnd.Text = "10 December 2021";
+            this.radDateReportEnd.Text = "13 December 2021";
             this.radDateReportEnd.ThemeName = "Material";
-            this.radDateReportEnd.Value = System.DateTime.Today;
+            this.radDateReportEnd.Value = new System.DateTime(2021, 12, 13, 0, 0, 0, 0);
+            this.radDateReportEnd.MaxDate = DateTime.Today;
+            this.radDateReportEnd.ValueChanged += new System.EventHandler(this.radDateReportEnd_ValueChanged);
             // 
             // AdminReportes
             // 

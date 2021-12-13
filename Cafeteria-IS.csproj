@@ -153,5 +153,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Controladores\Controladores.csproj">
+      <Project>{06e594f0-c2eb-4f67-a1a6-189eb7c519d0}</Project>
+      <Name>Controladores</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
