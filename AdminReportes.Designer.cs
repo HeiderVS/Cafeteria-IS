@@ -102,7 +102,7 @@ namespace Cafeteria_IS
             this.radDateReportStart.TabStop = false;
             this.radDateReportStart.Text = "10 December 2021";
             this.radDateReportStart.ThemeName = "Material";
-            this.radDateReportStart.Value = new System.DateTime(2021, 12, 10, 0, 0, 0, 0);
+            this.radDateReportStart.Value = System.DateTime.Today;
             this.radDateReportStart.ValueChanged += new System.EventHandler(this.radDateReportStart_ValueChanged);
             // 
             // radLabel3
@@ -196,7 +196,7 @@ namespace Cafeteria_IS
             this.radDateReportEnd.TabStop = false;
             this.radDateReportEnd.Text = "10 December 2021";
             this.radDateReportEnd.ThemeName = "Material";
-            this.radDateReportEnd.Value = new System.DateTime(2021, 12, 10, 0, 0, 0, 0);
+            this.radDateReportEnd.Value = System.DateTime.Today;
             // 
             // AdminReportes
             // 

@@ -96,7 +96,7 @@ namespace Cafeteria_IS
 
         private void AdminEliminar_Load(object sender, EventArgs e)
         {
-            if ()
+            //if ()
         }
     }
 }

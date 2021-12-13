@@ -41,7 +41,11 @@ namespace Cafeteria_IS
             var startDate = this.radDateReportStart.Value;
             var endDate = this.radDateReportEnd.Value;
 
-            if (DateTime.Compare(startDate, endDate) <= 0) return;
+            if (DateTime.Compare(startDate, endDate) <= 0)
+            {
+                this.radDateReportEnd.MinDate = startDate;
+                return;
+            }
             
             this.radDateReportStart.Value = DateTime.Today;
             MessageBox.Show("La fecha inicial no puede ser mayor que la final");
