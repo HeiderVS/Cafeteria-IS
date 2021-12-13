@@ -44,29 +44,59 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Telerik.WinControls, Version=2021.3.1123.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
-    <Reference Include="Telerik.WinControls.GridView, Version=2021.3.1123.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e">
-      <HintPath>..\..\..\Program Files (x86)\Progress\Telerik UI for WinForms R3 2021\Bin40\Telerik.WinControls.GridView.dll</HintPath>
+    <Reference Include="Telerik.WinControls, Version=2021.3.1123.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Telerik.WinControls.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.WinControls.RadDock, Version=2021.3.1123.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e">
-      <HintPath>..\..\..\Program Files (x86)\Progress\Telerik UI for WinForms R3 2021\Bin40\Telerik.WinControls.RadDock.dll</HintPath>
+    <Reference Include="Telerik.WinControls.GridView, Version=2021.3.1123.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Telerik.WinControls.GridView.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.WinControls.Themes.Aqua, Version=2021.3.1123.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="Telerik.WinControls.Themes.Material, Version=2021.3.1123.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e">
-      <HintPath>C:\Windows\assembly\GAC_MSIL\Telerik.WinControls.Themes.Material\2021.3.1123.20__5bb2a467cbec794e\Telerik.WinControls.Themes.Material.dll</HintPath>
+    <Reference Include="Telerik.WinControls.RadDock, Version=2021.3.1123.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Telerik.WinControls.RadDock.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.WinControls.Themes.Material, Version=2021.3.1123.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e">
-      <HintPath>..\..\..\Program Files (x86)\Progress\Telerik UI for WinForms R3 2021\Bin40\Telerik.WinControls.Themes.Material.dll</HintPath>
+    <Reference Include="Telerik.WinControls.Themes.Aqua, Version=2021.3.1123.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Telerik.WinControls.Themes.Aqua.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.WinControls.UI, Version=2021.3.1123.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="TelerikCommon, Version=2021.3.1123.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.Themes.Material, Version=2021.3.1123.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Telerik.WinControls.Themes.Material.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2021.3.1123.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Telerik.WinControls.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2021.3.1123.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\TelerikCommon.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminEditar.Designer.cs">
+      <DependentUpon>AdminEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminEliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminEliminar.Designer.cs">
+      <DependentUpon>AdminEliminar.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminReportes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminReportes.Designer.cs">
       <DependentUpon>AdminReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editar Empleado Existente .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar Empleado Existente .Designer.cs">
+      <DependentUpon>Editar Empleado Existente .cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -82,8 +112,17 @@
     <Compile Include="UsuariosAgregar.Designer.cs">
       <DependentUpon>UsuariosAgregar.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminEditar.resx">
+      <DependentUpon>AdminEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminEliminar.resx">
+      <DependentUpon>AdminEliminar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminReportes.resx">
       <DependentUpon>AdminReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar Empleado Existente .resx">
+      <DependentUpon>Editar Empleado Existente .cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

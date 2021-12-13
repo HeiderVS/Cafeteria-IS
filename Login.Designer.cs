@@ -30,7 +30,6 @@ namespace Cafeteria_IS
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.aquaTheme1 = new Telerik.WinControls.Themes.AquaTheme();
             this.radPictureBox1 = new Telerik.WinControls.UI.RadPictureBox();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
@@ -142,7 +141,7 @@ namespace Cafeteria_IS
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1008, 861);
+            this.ClientSize = new System.Drawing.Size(1008, 845);
             this.Controls.Add(this.btnMostrarContra);
             this.Controls.Add(this.radTextBoxContraseña);
             this.Controls.Add(this.radTextBoxUsuario);
@@ -152,6 +151,7 @@ namespace Cafeteria_IS
             this.Controls.Add(this.radLabel1);
             this.Controls.Add(this.radPictureBox1);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize) (this.radPictureBox1)).EndInit();
@@ -167,8 +167,6 @@ namespace Cafeteria_IS
         }
 
         #endregion
-
-        private Telerik.WinControls.Themes.AquaTheme aquaTheme1;
         private Telerik.WinControls.UI.RadPictureBox radPictureBox1;
         private Telerik.WinControls.UI.RadLabel radLabel1;
         private Telerik.WinControls.UI.RadLabel radLabel2;
