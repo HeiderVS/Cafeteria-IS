@@ -38,10 +38,16 @@ namespace Cafeteria_IS
         {
             try
             {
-                if(radTextBoxUsuario.Text=="Heider" || txtContra.Text == "123") 
+                if (radTextBoxUsuario.Text == "Heider" || txtContra.Text == "123")
                 {
-                    MessageBox.Show("Bienvenido","Bienvenido");
+                    MessageBox.Show("Bienvenido", "Bienvenido");
                     Punto_de_Venta frm = new Punto_de_Venta();
+                    frm.Show();
+                    this.Hide();
+                }
+                else {
+                    MessageBox.Show("Bienvenido", "Bienvenido");
+                    UsuariosAgregar frm = new UsuariosAgregar();
                     frm.Show();
                     this.Hide();
                 }

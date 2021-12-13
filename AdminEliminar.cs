@@ -98,5 +98,10 @@ namespace Cafeteria_IS
         {
             
         }
+
+        private void radMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

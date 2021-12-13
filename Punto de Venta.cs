@@ -33,5 +33,25 @@ namespace Cafeteria_IS
         {
 
         }
+
+        private void radButton2_Click(object sender, EventArgs e)
+        {
+            MessageBoxButtons botones = MessageBoxButtons.OKCancel;
+            DialogResult dr = MessageBox.Show("Esta seguro que quiere cancelar la compra?", "Confirmacion", botones, MessageBoxIcon.Warning);
+            if (dr == DialogResult.OK)
+            {
+                MessageBox.Show("Compra eliminada", "Cancelacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void radButton1_Click(object sender, EventArgs e)
+        {
+            MessageBoxButtons botones = MessageBoxButtons.OKCancel;
+            DialogResult dr = MessageBox.Show("Esta seguro que quiere Finalizar la compra?", "Confirmacion", botones, MessageBoxIcon.Question);
+            if (dr == DialogResult.OK)
+            {
+                MessageBox.Show("Compra guardada con exito", "Compra finalizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }
