@@ -338,14 +338,18 @@ namespace Cafeteria_IS
             // 
             // radGridView1
             // 
-            this.radGridView1.Location = new System.Drawing.Point(78, 334);
+            this.radGridView1.Location = new System.Drawing.Point(78, 373);
             // 
             // 
             // 
+            this.radGridView1.MasterTemplate.AllowAddNewRow = false;
+            this.radGridView1.MasterTemplate.AllowColumnReorder = false;
+            this.radGridView1.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.radGridView1.Name = "radGridView1";
+            this.radGridView1.ReadOnly = true;
             this.radGridView1.ShowGroupPanel = false;
-            this.radGridView1.Size = new System.Drawing.Size(975, 471);
+            this.radGridView1.Size = new System.Drawing.Size(1002, 443);
             this.radGridView1.TabIndex = 2;
             this.radGridView1.ThemeName = "Material";
             // 

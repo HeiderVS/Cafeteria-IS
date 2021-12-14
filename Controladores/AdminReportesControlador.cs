@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Modelos;
@@ -18,8 +17,10 @@ namespace Controladores
                         idVenta = venta.id,
                         idProducto = venta.productoId,
                         cantidad = venta.cantidad,
-                        precioTotal = venta.total
-                    }).ToList();
+                        precioTotal = venta.total,
+                        fecha = venta.fecha
+                    }).Where(venta => venta.fecha >= startDate && venta.fecha < endDate)
+                    .ToList();
                 return reporteViewModels;
             }
         }
