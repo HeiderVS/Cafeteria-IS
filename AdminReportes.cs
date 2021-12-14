@@ -73,7 +73,7 @@ namespace Cafeteria_IS
         {
             var startDate = this.radDateReportStart.Value;
             var endDate = this.radDateReportEnd.Value;
-            _adminReportesControlador.GetReportes(startDate, endDate);
+            radGridView1.DataSource = _adminReportesControlador.GetReportes(startDate, endDate);
         }
     }
 }

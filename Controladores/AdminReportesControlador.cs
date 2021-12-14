@@ -1,13 +1,27 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using Modelos;
 
 namespace Controladores
 {
     public class AdminReportesControlador
     {
-        public void GetReportes(DateTime startDate, DateTime endDate)
+        public IEnumerable<ReporteViewModel> GetReportes(DateTime startDate, DateTime endDate)
         {
-            System.Diagnostics.Debug.WriteLine("Aqui se hara una consulta a Modelos, para traer la info de BD para " + 
-                          startDate.Date + " " + endDate.Date);
+            using (Modelos.CafeteriaDBContext dbContext = new CafeteriaDBContext())
+            {
+                IEnumerable<Modelos.ReporteViewModel> reporteViewModels = (from venta in dbContext.Ventas
+                    select new ReporteViewModel
+                    {
+                        idVenta = venta.id,
+                        idProducto = venta.productoId,
+                        cantidad = venta.cantidad,
+                        precioTotal = venta.total
+                    }).ToList();
+                return reporteViewModels;
+            }
         }
     }
 }
