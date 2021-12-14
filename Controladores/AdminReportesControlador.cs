@@ -12,14 +12,14 @@ namespace Controladores
             using (Modelos.CafeteriaDBContext dbContext = new CafeteriaDBContext())
             {
                 IEnumerable<Modelos.ReporteViewModel> reporteViewModels = (from venta in dbContext.Ventas
-                    select new ReporteViewModel
-                    {
-                        idVenta = venta.id,
-                        idProducto = venta.productoId,
-                        cantidad = venta.cantidad,
-                        precioTotal = venta.total,
-                        fecha = venta.fecha
-                    }).Where(venta => venta.fecha >= startDate && venta.fecha < endDate)
+                        select new ReporteViewModel
+                        {
+                            idVenta = venta.id,
+                            idProducto = venta.productoId,
+                            cantidad = venta.cantidad,
+                            precioTotal = venta.total,
+                            fecha = venta.fecha
+                        }).Where(venta => venta.fecha >= startDate && venta.fecha < endDate)
                     .ToList();
                 return reporteViewModels;
             }

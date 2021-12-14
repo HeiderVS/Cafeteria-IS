@@ -144,6 +144,7 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="AdminReportesControlador.cs" />
+        <Compile Include="LoginControlador.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>

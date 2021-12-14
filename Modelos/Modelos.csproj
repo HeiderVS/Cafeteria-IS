@@ -143,13 +143,27 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="CafeteriaDBContext.cs" />
+        <Compile Include="Extension.cs" />
         <Compile Include="Migrations\202112132148408_AddVentas.cs" />
         <Compile Include="Migrations\202112132148408_AddVentas.Designer.cs">
           <DependentUpon>202112132148408_AddVentas.cs</DependentUpon>
         </Compile>
+        <Compile Include="Migrations\202112140527143_AddUsuarios.cs" />
+        <Compile Include="Migrations\202112140527143_AddUsuarios.Designer.cs">
+          <DependentUpon>202112140527143_AddUsuarios.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Migrations\202112140531522_AddRoles.cs" />
+        <Compile Include="Migrations\202112140531522_AddRoles.Designer.cs">
+          <DependentUpon>202112140531522_AddRoles.cs</DependentUpon>
+        </Compile>
         <Compile Include="Migrations\Configuration.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="ReporteViewModel.cs" />
+        <Compile Include="StringUtils.cs" />
+        <Compile Include="Usuarios\Roles.cs" />
+        <Compile Include="Usuarios\RolesEnum.cs" />
+        <Compile Include="Usuarios\Usuario.cs" />
+        <Compile Include="Usuarios\UsuarioViewModel.cs" />
     </ItemGroup>
     <ItemGroup>
       <None Include="App.config" />
@@ -158,6 +172,12 @@
     <ItemGroup>
       <EmbeddedResource Include="Migrations\202112132148408_AddVentas.resx">
         <DependentUpon>202112132148408_AddVentas.cs</DependentUpon>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Migrations\202112140527143_AddUsuarios.resx">
+        <DependentUpon>202112140527143_AddUsuarios.cs</DependentUpon>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Migrations\202112140531522_AddRoles.resx">
+        <DependentUpon>202112140531522_AddRoles.cs</DependentUpon>
       </EmbeddedResource>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

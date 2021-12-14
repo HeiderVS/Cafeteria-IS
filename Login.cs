@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Controladores;
 
 namespace Cafeteria_IS
 {
     public partial class Login : Form
     {
+        private LoginControlador _loginControlador = new LoginControlador();
         public Login()
         {
             InitializeComponent();
@@ -32,9 +34,22 @@ namespace Cafeteria_IS
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            UsuariosAgregar frm = new UsuariosAgregar();
-            frm.Show();
+            int rol = _loginControlador.GetLogin(this.radTextBoxUsuario.Text, this.radTextBoxContraseña.Text);
+            switch (rol)
+            {
+                case -1:
+                    MessageBox.Show("Usuario no valido");
+                    return;
+                case 0:
+                    UsuariosAgregar frm = new UsuariosAgregar();
+                    frm.Show();
+                    break;
+            }
             this.Hide();
+            /*UsuariosAgregar frm = new UsuariosAgregar();
+            frm.Show();
+            this.Hide();*/
+        
         }
 
         private void radRadioButton1_ToggleStateChanged(object sender,
