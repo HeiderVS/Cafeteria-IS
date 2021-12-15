@@ -64,6 +64,8 @@ namespace Cafeteria_IS
             this.radMenu1.Size = new System.Drawing.Size(1134, 37);
             this.radMenu1.TabIndex = 19;
             this.radMenu1.ThemeName = "Material";
+            this.radMenu1.Visible = false;
+            this.radMenu1.Click += new System.EventHandler(this.radMenu1_Click);
             // 
             // radMenuItem2
             // 

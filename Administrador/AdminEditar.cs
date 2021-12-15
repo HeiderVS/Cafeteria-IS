@@ -14,6 +14,7 @@ namespace Cafeteria_IS
     public partial class AdminEditar : Form
     {
         private UsuariosControlador _usuariosControlador = new UsuariosControlador();
+
         public AdminEditar()
         {
             InitializeComponent();
@@ -24,43 +25,11 @@ namespace Cafeteria_IS
             radGridView1.DataSource = _usuariosControlador.GetUsuarios();
         }
 
-        private void radMenuItem2_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void radMenuItem4_Click(object sender, EventArgs e)
-        {
-            AdminEditar frm = new AdminEditar();
-            frm.Show();
-            this.Hide();
-        }
-
-        private void radMenuItem5_Click(object sender, EventArgs e)
-        {
-            AdminEliminar frm = new AdminEliminar();
-            frm.Show();
-            this.Hide();
-        }
-
-        private void radBtnReports_Click(object sender, EventArgs e)
-        {
-            AdminReportes adminReportes = new AdminReportes();
-            adminReportes.Show();
-            this.Hide();
-        }
-
-        private void radMenuItem3_Click(object sender, EventArgs e)
-        {
-            UsuariosAgregar frm = new UsuariosAgregar();
-            frm.Show();
-            this.Hide();
-        }
-
         private void radButton2_Click(object sender, EventArgs e)
         {
             MessageBoxButtons botones = MessageBoxButtons.YesNo;
-            DialogResult dr = MessageBox.Show("Desea generar una nueva contraseña para este empleado?", "Confirmacion",botones, MessageBoxIcon.Warning);
+            DialogResult dr = MessageBox.Show("Desea generar una nueva contraseña para este empleado?", "Confirmacion",
+                botones, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {
                 //Generando Contraseña Aleatoria
@@ -75,11 +44,14 @@ namespace Cafeteria_IS
                     letra = caracteres[rdn.Next(longitud)];
                     contraseniaAleatoria += letra.ToString();
                 }
-                //-----------------------------------------------------------------------
-                MessageBox.Show("Contraseña Generada con exito", "Contraseña Generada", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Clipboard.SetDataObject(contraseniaAleatoria, true);
-                MessageBox.Show("Su nueva Contraseña es: " + contraseniaAleatoria+"\n\n Contraseña copiada al portapapeles", "Nueva Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                //-----------------------------------------------------------------------
+                MessageBox.Show("Contraseña Generada con exito", "Contraseña Generada", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                Clipboard.SetDataObject(contraseniaAleatoria, true);
+                MessageBox.Show(
+                    "Su nueva Contraseña es: " + contraseniaAleatoria + "\n\n Contraseña copiada al portapapeles",
+                    "Nueva Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -88,11 +60,6 @@ namespace Cafeteria_IS
             /*Editar_Empleado_Existente frm = new Editar_Empleado_Existente();
             frm.Show();*/
             this.radGridView1.PrintPreview();
-        }
-
-        private void txtBuscador_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

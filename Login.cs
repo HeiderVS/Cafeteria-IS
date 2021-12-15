@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Cafeteria_IS.Administrador;
 using Controladores;
 
 namespace Cafeteria_IS
@@ -42,8 +43,10 @@ namespace Cafeteria_IS
                     MessageBox.Show("Usuario no valido");
                     return;
                 case 0:
-                    UsuariosAgregar frm = new UsuariosAgregar();
-                    frm.Show();
+                    /*UsuariosAgregar frm = new UsuariosAgregar();
+                    frm.Show();*/
+                    PanelAdministrador admin = new PanelAdministrador();
+                    admin.Show();
                     break;
                 case 1:
                     Punto_de_Venta puntoDeVenta = new Punto_de_Venta();

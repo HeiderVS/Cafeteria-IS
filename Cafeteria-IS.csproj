@@ -184,41 +184,53 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminEditar.cs">
+    <Compile Include="Administrador\AdminEditar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminEditar.Designer.cs">
+    <Compile Include="Administrador\AdminEditar.Designer.cs">
       <DependentUpon>AdminEditar.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminEliminar.cs">
+    <Compile Include="Administrador\AdminEliminar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminEliminar.Designer.cs">
+    <Compile Include="Administrador\AdminEliminar.Designer.cs">
       <DependentUpon>AdminEliminar.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminReportes.cs">
+    <Compile Include="Administrador\AdminReportes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminReportes.Designer.cs">
+    <Compile Include="Administrador\AdminReportes.Designer.cs">
       <DependentUpon>AdminReportes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Editar Empleado Existente .cs">
+    <Compile Include="Administrador\Editar Empleado Existente .cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Editar Empleado Existente .Designer.cs">
+    <Compile Include="Administrador\Editar Empleado Existente .Designer.cs">
       <DependentUpon>Editar Empleado Existente .cs</DependentUpon>
     </Compile>
-    <Compile Include="InventarioAgregar.cs">
+    <Compile Include="Administrador\InventarioAgregar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InventarioAgregar.Designer.cs">
+    <Compile Include="Administrador\InventarioAgregar.Designer.cs">
       <DependentUpon>InventarioAgregar.cs</DependentUpon>
     </Compile>
-    <Compile Include="InventarioProductos.cs">
+    <Compile Include="Administrador\InventarioProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InventarioProductos.Designer.cs">
+    <Compile Include="Administrador\InventarioProductos.Designer.cs">
       <DependentUpon>InventarioProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\PanelAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\PanelAdministrador.Designer.cs">
+      <DependentUpon>PanelAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\UsuariosAgregar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\UsuariosAgregar.Designer.cs">
+      <DependentUpon>UsuariosAgregar.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -228,35 +240,35 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Punto de Venta.cs">
+    <Compile Include="Vendedor\Punto de Venta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Punto de Venta.Designer.cs">
+    <Compile Include="Vendedor\Punto de Venta.Designer.cs">
       <DependentUpon>Punto de Venta.cs</DependentUpon>
     </Compile>
-    <Compile Include="UsuariosAgregar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UsuariosAgregar.Designer.cs">
-      <DependentUpon>UsuariosAgregar.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="AdminEditar.resx">
+    <EmbeddedResource Include="Administrador\AdminEditar.resx">
       <DependentUpon>AdminEditar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminEliminar.resx">
+    <EmbeddedResource Include="Administrador\AdminEliminar.resx">
       <DependentUpon>AdminEliminar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminReportes.resx">
+    <EmbeddedResource Include="Administrador\AdminReportes.resx">
       <DependentUpon>AdminReportes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Editar Empleado Existente .resx">
+    <EmbeddedResource Include="Administrador\Editar Empleado Existente .resx">
       <DependentUpon>Editar Empleado Existente .cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InventarioAgregar.resx">
+    <EmbeddedResource Include="Administrador\InventarioAgregar.resx">
       <DependentUpon>InventarioAgregar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InventarioProductos.resx">
+    <EmbeddedResource Include="Administrador\InventarioProductos.resx">
       <DependentUpon>InventarioProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\PanelAdministrador.resx">
+      <DependentUpon>PanelAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\UsuariosAgregar.resx">
+      <DependentUpon>UsuariosAgregar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -271,11 +283,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Punto de Venta.resx">
+    <EmbeddedResource Include="Vendedor\Punto de Venta.resx">
       <DependentUpon>Punto de Venta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UsuariosAgregar.resx">
-      <DependentUpon>UsuariosAgregar.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

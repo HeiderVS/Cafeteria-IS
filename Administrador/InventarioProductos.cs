@@ -25,5 +25,10 @@ namespace Cafeteria_IS
                 this.radGridProductos.PrintPreview();
             }
         }
+
+        private void radMenu1_Click(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

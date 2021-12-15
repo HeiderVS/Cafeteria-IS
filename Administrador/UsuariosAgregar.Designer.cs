@@ -308,9 +308,10 @@ namespace Cafeteria_IS
             this.radMenu1.Items.AddRange(new Telerik.WinControls.RadItem[] {this.radMenuItem2, this.radMenuItem1, this.radBtnReports});
             this.radMenu1.Location = new System.Drawing.Point(0, 0);
             this.radMenu1.Name = "radMenu1";
-            this.radMenu1.Size = new System.Drawing.Size(1134, 23);
+            this.radMenu1.Size = new System.Drawing.Size(1134, 37);
             this.radMenu1.TabIndex = 1;
             this.radMenu1.ThemeName = "Material";
+            this.radMenu1.Visible = false;
             // 
             // btnAceptar
             // 
