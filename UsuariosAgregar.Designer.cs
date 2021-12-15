@@ -56,31 +56,31 @@ namespace Cafeteria_IS
             this.radMenu1 = new Telerik.WinControls.UI.RadMenu();
             this.btnAceptar = new Telerik.WinControls.UI.RadButton();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.radPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtApPaterno)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNombre)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRegistrarUsuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.txtApPaterno)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.txtNombre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radLabel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.btnRegistrarUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radLabel3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radLabel1)).BeginInit();
             this.radLabel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtApMaterno)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNomUsuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtContraAgregarUsuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCancelarAgrUsuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAceptar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radLabel4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radLabel5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radLabel6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.lbl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.lbl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.txtApMaterno)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.txtNomUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.txtContraAgregarUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.btnCancelarAgrUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radMenu1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.btnAceptar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // radPictureBox1
             // 
-            this.radPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("radPictureBox1.Image")));
+            this.radPictureBox1.Image = ((System.Drawing.Image) (resources.GetObject("radPictureBox1.Image")));
             this.radPictureBox1.ImageLayout = Telerik.WinControls.UI.RadImageLayout.Stretch;
             this.radPictureBox1.Location = new System.Drawing.Point(447, 12);
             this.radPictureBox1.Name = "radPictureBox1";
@@ -89,10 +89,7 @@ namespace Cafeteria_IS
             // 
             // radMenuItem2
             // 
-            this.radMenuItem2.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.radMenuItem4,
-            this.radMenuItem5,
-            this.radMenuItem6});
+            this.radMenuItem2.Items.AddRange(new Telerik.WinControls.RadItem[] {this.radMenuItem4, this.radMenuItem5, this.radMenuItem6});
             this.radMenuItem2.Name = "radMenuItem2";
             this.radMenuItem2.Text = "Usuarios";
             this.radMenuItem2.Click += new System.EventHandler(this.radMenuItem2_Click);
@@ -119,6 +116,7 @@ namespace Cafeteria_IS
             // 
             this.radMenuItem1.Name = "radMenuItem1";
             this.radMenuItem1.Text = "Inventario";
+            this.radMenuItem1.Click += new System.EventHandler(this.radMenuItem1_Click);
             // 
             // radBtnReports
             // 
@@ -152,7 +150,7 @@ namespace Cafeteria_IS
             // radLabel2
             // 
             this.radLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.radLabel2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.radLabel2.Location = new System.Drawing.Point(65, 232);
             this.radLabel2.Name = "radLabel2";
             this.radLabel2.Size = new System.Drawing.Size(80, 30);
@@ -172,15 +170,15 @@ namespace Cafeteria_IS
             this.btnRegistrarUsuario.Text = "Registrar";
             this.btnRegistrarUsuario.Visible = false;
             this.btnRegistrarUsuario.Click += new System.EventHandler(this.btnRegistrarUsuario_Click);
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnRegistrarUsuario.GetChildAt(0))).ImageAlignment = System.Drawing.ContentAlignment.BottomCenter;
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnRegistrarUsuario.GetChildAt(0))).Text = "Registrar";
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnRegistrarUsuario.GetChildAt(0))).EnableBorderHighlight = true;
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnRegistrarUsuario.GetChildAt(0))).BorderHighlightColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(32)))), ((int)(((byte)(255)))));
+            ((Telerik.WinControls.UI.RadButtonElement) (this.btnRegistrarUsuario.GetChildAt(0))).ImageAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            ((Telerik.WinControls.UI.RadButtonElement) (this.btnRegistrarUsuario.GetChildAt(0))).Text = "Registrar";
+            ((Telerik.WinControls.UI.RadButtonElement) (this.btnRegistrarUsuario.GetChildAt(0))).EnableBorderHighlight = true;
+            ((Telerik.WinControls.UI.RadButtonElement) (this.btnRegistrarUsuario.GetChildAt(0))).BorderHighlightColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (32)))), ((int) (((byte) (255)))));
             // 
             // radLabel3
             // 
             this.radLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.radLabel3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.radLabel3.Location = new System.Drawing.Point(65, 374);
             this.radLabel3.Name = "radLabel3";
             this.radLabel3.Size = new System.Drawing.Size(160, 30);
@@ -190,7 +188,7 @@ namespace Cafeteria_IS
             // radLabel1
             // 
             this.radLabel1.Controls.Add(this.radLabel4);
-            this.radLabel1.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel1.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.radLabel1.Location = new System.Drawing.Point(62, 126);
             this.radLabel1.Name = "radLabel1";
             this.radLabel1.Size = new System.Drawing.Size(169, 56);
@@ -200,7 +198,7 @@ namespace Cafeteria_IS
             // radLabel4
             // 
             this.radLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.radLabel4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.radLabel4.Location = new System.Drawing.Point(3, 50);
             this.radLabel4.Name = "radLabel4";
             this.radLabel4.Size = new System.Drawing.Size(75, 30);
@@ -210,7 +208,7 @@ namespace Cafeteria_IS
             // radLabel5
             // 
             this.radLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.radLabel5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.radLabel5.Location = new System.Drawing.Point(62, 188);
             this.radLabel5.Name = "radLabel5";
             this.radLabel5.Size = new System.Drawing.Size(363, 24);
@@ -220,7 +218,7 @@ namespace Cafeteria_IS
             // radLabel6
             // 
             this.radLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.radLabel6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.radLabel6.Location = new System.Drawing.Point(65, 303);
             this.radLabel6.Name = "radLabel6";
             this.radLabel6.Size = new System.Drawing.Size(153, 30);
@@ -230,7 +228,7 @@ namespace Cafeteria_IS
             // lbl1
             // 
             this.lbl1.BackColor = System.Drawing.Color.Transparent;
-            this.lbl1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl1.Location = new System.Drawing.Point(65, 497);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(179, 30);
@@ -241,7 +239,7 @@ namespace Cafeteria_IS
             // lbl2
             // 
             this.lbl2.BackColor = System.Drawing.Color.Transparent;
-            this.lbl2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl2.Location = new System.Drawing.Point(65, 580);
             this.lbl2.Name = "lbl2";
             this.lbl2.Size = new System.Drawing.Size(106, 30);
@@ -265,7 +263,7 @@ namespace Cafeteria_IS
             this.txtNomUsuario.AutoSize = false;
             this.txtNomUsuario.BackColor = System.Drawing.Color.White;
             this.txtNomUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNomUsuario.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomUsuario.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtNomUsuario.ForeColor = System.Drawing.Color.DimGray;
             this.txtNomUsuario.Location = new System.Drawing.Point(65, 533);
             this.txtNomUsuario.Name = "txtNomUsuario";
@@ -279,7 +277,7 @@ namespace Cafeteria_IS
             this.txtContraAgregarUsuario.AutoSize = false;
             this.txtContraAgregarUsuario.BackColor = System.Drawing.Color.White;
             this.txtContraAgregarUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtContraAgregarUsuario.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraAgregarUsuario.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtContraAgregarUsuario.ForeColor = System.Drawing.Color.DimGray;
             this.txtContraAgregarUsuario.Location = new System.Drawing.Point(65, 616);
             this.txtContraAgregarUsuario.Name = "txtContraAgregarUsuario";
@@ -293,7 +291,7 @@ namespace Cafeteria_IS
             // 
             this.btnCancelarAgrUsuario.BackColor = System.Drawing.Color.Transparent;
             this.btnCancelarAgrUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelarAgrUsuario.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarAgrUsuario.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnCancelarAgrUsuario.Location = new System.Drawing.Point(191, 694);
             this.btnCancelarAgrUsuario.Name = "btnCancelarAgrUsuario";
             this.btnCancelarAgrUsuario.Size = new System.Drawing.Size(66, 24);
@@ -306,11 +304,8 @@ namespace Cafeteria_IS
             // 
             this.radMenu1.BackColor = System.Drawing.Color.Gainsboro;
             this.radMenu1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radMenu1.Font = new System.Drawing.Font("Segoe UI Historic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radMenu1.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.radMenuItem2,
-            this.radMenuItem1,
-            this.radBtnReports});
+            this.radMenu1.Font = new System.Drawing.Font("Segoe UI Historic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.radMenu1.Items.AddRange(new Telerik.WinControls.RadItem[] {this.radMenuItem2, this.radMenuItem1, this.radBtnReports});
             this.radMenu1.Location = new System.Drawing.Point(0, 0);
             this.radMenu1.Name = "radMenu1";
             this.radMenu1.Size = new System.Drawing.Size(1134, 23);
@@ -329,10 +324,10 @@ namespace Cafeteria_IS
             this.btnAceptar.TabIndex = 16;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.Click += new System.EventHandler(this.radButton1_Click);
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnAceptar.GetChildAt(0))).ImageAlignment = System.Drawing.ContentAlignment.BottomCenter;
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnAceptar.GetChildAt(0))).Text = "Aceptar";
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnAceptar.GetChildAt(0))).EnableBorderHighlight = true;
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnAceptar.GetChildAt(0))).BorderHighlightColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(32)))), ((int)(((byte)(255)))));
+            ((Telerik.WinControls.UI.RadButtonElement) (this.btnAceptar.GetChildAt(0))).ImageAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            ((Telerik.WinControls.UI.RadButtonElement) (this.btnAceptar.GetChildAt(0))).Text = "Aceptar";
+            ((Telerik.WinControls.UI.RadButtonElement) (this.btnAceptar.GetChildAt(0))).EnableBorderHighlight = true;
+            ((Telerik.WinControls.UI.RadButtonElement) (this.btnAceptar.GetChildAt(0))).BorderHighlightColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (32)))), ((int) (((byte) (255)))));
             // 
             // errorProvider1
             // 
@@ -365,30 +360,29 @@ namespace Cafeteria_IS
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UsuariosAgregar";
             this.Load += new System.EventHandler(this.UsuariosAgregar_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.radPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtApPaterno)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNombre)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRegistrarUsuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.txtApPaterno)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.txtNombre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radLabel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.btnRegistrarUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radLabel3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radLabel1)).EndInit();
             this.radLabel1.ResumeLayout(false);
             this.radLabel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtApMaterno)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNomUsuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtContraAgregarUsuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCancelarAgrUsuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAceptar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radLabel4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radLabel5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radLabel6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.lbl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.lbl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.txtApMaterno)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.txtNomUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.txtContraAgregarUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.btnCancelarAgrUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radMenu1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.btnAceptar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         private Telerik.WinControls.UI.RadMenuItem radBtnReports;

@@ -14,6 +14,7 @@ namespace Cafeteria_IS
     public partial class Login : Form
     {
         private LoginControlador _loginControlador = new LoginControlador();
+
         public Login()
         {
             InitializeComponent();
@@ -44,12 +45,13 @@ namespace Cafeteria_IS
                     UsuariosAgregar frm = new UsuariosAgregar();
                     frm.Show();
                     break;
+                case 1:
+                    Punto_de_Venta puntoDeVenta = new Punto_de_Venta();
+                    puntoDeVenta.Show();
+                    break;
             }
+
             this.Hide();
-            /*UsuariosAgregar frm = new UsuariosAgregar();
-            frm.Show();
-            this.Hide();*/
-        
         }
 
         private void radRadioButton1_ToggleStateChanged(object sender,

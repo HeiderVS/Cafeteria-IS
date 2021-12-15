@@ -1,7 +1,6 @@
 using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
+using Modelos.Inventario;
 using Modelos.Usuarios;
 
 namespace Modelos
@@ -15,6 +14,10 @@ namespace Modelos
         public DbSet<Ventas> Ventas { get; set; }
         public DbSet<Roles> Roles { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
+
+        public DbSet<Categoria> Categorias { get; set; }
+        
+        public DbSet<Producto> Productos { get; set; }
     }
 
     public class Ventas

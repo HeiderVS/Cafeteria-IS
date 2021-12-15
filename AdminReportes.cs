@@ -7,6 +7,7 @@ namespace Cafeteria_IS
     public partial class AdminReportes : Form
     {
         private AdminReportesControlador _adminReportesControlador = new AdminReportesControlador();
+
         public AdminReportes()
         {
             InitializeComponent();
@@ -21,7 +22,6 @@ namespace Cafeteria_IS
 
         private void radMenuItem2_Click(object sender, EventArgs e)
         {
-
         }
 
         private void radMenuItem5_Click(object sender, EventArgs e)
@@ -48,23 +48,23 @@ namespace Cafeteria_IS
                 this.radDateReportEnd.MinDate = startDate;
                 return;
             }
-            
+
             this.radDateReportStart.Value = DateTime.Today;
             MessageBox.Show("La fecha inicial no puede ser mayor que la final");
         }
-        
+
         private void radDateReportEnd_ValueChanged(object sender, EventArgs e)
         {
             var startDate = this.radDateReportStart.Value;
             var endDate = this.radDateReportEnd.Value;
-            
-            
+
+
             if (DateTime.Compare(endDate, startDate) > 0)
             {
                 this.radDateReportStart.MaxDate = endDate;
                 return;
             }
-            
+
             this.radDateReportEnd.Value = DateTime.Today;
             MessageBox.Show("La fecha final no puede ser menor que la inicial");
         }
@@ -74,6 +74,14 @@ namespace Cafeteria_IS
             var startDate = this.radDateReportStart.Value;
             var endDate = this.radDateReportEnd.Value;
             radGridView1.DataSource = _adminReportesControlador.GetReportes(startDate, endDate);
+        }
+
+        private void radBtnImprimir_Click(object sender, EventArgs e)
+        {
+            if (this.radGridView1.RowCount > 0)
+            {
+                this.radGridView1.PrintPreview();
+            }
         }
     }
 }

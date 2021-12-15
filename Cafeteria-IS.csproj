@@ -164,9 +164,15 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Telerik.WinControls.Themes.Aqua.dll</HintPath>
     </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Material, Version=2021.3.1123.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e">
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Telerik.WinControls.Themes.Material\2021.3.1123.20__5bb2a467cbec794e\Telerik.WinControls.Themes.Material.dll</HintPath>
+    </Reference>
     <Reference Include="Telerik.WinControls.Themes.Material, Version=2021.3.1123.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Telerik.WinControls.Themes.Material.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2021.3.1123.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e">
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Telerik.WinControls.UI\2021.3.1123.20__5bb2a467cbec794e\Telerik.WinControls.UI.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.WinControls.UI, Version=2021.3.1123.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -202,6 +208,18 @@
     <Compile Include="Editar Empleado Existente .Designer.cs">
       <DependentUpon>Editar Empleado Existente .cs</DependentUpon>
     </Compile>
+    <Compile Include="InventarioAgregar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventarioAgregar.Designer.cs">
+      <DependentUpon>InventarioAgregar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventarioProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventarioProductos.Designer.cs">
+      <DependentUpon>InventarioProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +228,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Punto de Venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Punto de Venta.Designer.cs">
+      <DependentUpon>Punto de Venta.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsuariosAgregar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,6 +252,12 @@
     <EmbeddedResource Include="Editar Empleado Existente .resx">
       <DependentUpon>Editar Empleado Existente .cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InventarioAgregar.resx">
+      <DependentUpon>InventarioAgregar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventarioProductos.resx">
+      <DependentUpon>InventarioProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -241,6 +271,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Punto de Venta.resx">
+      <DependentUpon>Punto de Venta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UsuariosAgregar.resx">
       <DependentUpon>UsuariosAgregar.cs</DependentUpon>
     </EmbeddedResource>
@@ -267,6 +300,10 @@
       <Project>{db9d39c1-2874-4a7b-9b8c-327de4e1bab1}</Project>
       <Name>Modelos</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\printing__4_.png" />
+    <Content Include="Resources\_26864_coffee_time_loading.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

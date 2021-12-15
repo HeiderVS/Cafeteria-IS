@@ -120,4 +120,15 @@
   <metadata name="materialTheme1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="radBtnImprimir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        bwAAAG8B8aLcQwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADKSURBVDhPpdO9
+        DcIwEAXgq9IGKQVrsANNBkhqKnpGoE1HnYodmAKJAokBYAk6wLyHbOtsGawYS1+U+23iiDHGw+lgk9EF
+        M2q4Br7sM9hTpxbMWHTxN+xhr49VoWwBzhpOcAFmzhnsYS9nOCt3YLIEZ5OFlCssYaVyFAS/POAAR5Wj
+        ICiRTE4hT52wn6aBRaRRn9HhrIzwsgm3YIBbZIgWcGZ0l6GCObgFLWwjrVrA3uoT82EL/ibi9LCL9LbG
+        R/Iq//cz2SUTf2cjb62KQK/04fIpAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

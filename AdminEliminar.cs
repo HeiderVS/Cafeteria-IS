@@ -96,7 +96,12 @@ namespace Cafeteria_IS
 
         private void AdminEliminar_Load(object sender, EventArgs e)
         {
-            //if ()
+            
+        }
+
+        private void radMenuItem1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

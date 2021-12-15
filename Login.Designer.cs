@@ -31,6 +31,7 @@ namespace Cafeteria_IS
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.radPictureBox1 = new Telerik.WinControls.UI.RadPictureBox();
+            this.radCardView1 = new Telerik.WinControls.UI.RadCardView();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
@@ -38,7 +39,11 @@ namespace Cafeteria_IS
             this.radTextBoxUsuario = new Telerik.WinControls.UI.RadTextBox();
             this.radTextBoxContraseña = new Telerik.WinControls.UI.RadTextBox();
             this.btnMostrarContra = new Telerik.WinControls.UI.RadRadioButton();
+            this.radSaveFileDialog1 = new Telerik.WinControls.UI.RadSaveFileDialog();
             ((System.ComponentModel.ISupportInitialize) (this.radPictureBox1)).BeginInit();
+            this.radPictureBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.radCardView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radCardView1.CardTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.radLabel3)).BeginInit();
@@ -50,6 +55,7 @@ namespace Cafeteria_IS
             // 
             // radPictureBox1
             // 
+            this.radPictureBox1.Controls.Add(this.radCardView1);
             this.radPictureBox1.DefaultImage = ((System.Drawing.Image) (resources.GetObject("radPictureBox1.DefaultImage")));
             this.radPictureBox1.ForeColor = System.Drawing.Color.White;
             this.radPictureBox1.Image = ((System.Drawing.Image) (resources.GetObject("radPictureBox1.Image")));
@@ -60,6 +66,20 @@ namespace Cafeteria_IS
             this.radPictureBox1.Size = new System.Drawing.Size(515, 864);
             this.radPictureBox1.TabIndex = 0;
             this.radPictureBox1.ImageLoaded += new System.EventHandler(this.radPictureBox1_ImageLoaded);
+            // 
+            // radCardView1
+            // 
+            // 
+            // 
+            // 
+            this.radCardView1.CardTemplate.Location = new System.Drawing.Point(0, 0);
+            this.radCardView1.CardTemplate.Name = "";
+            this.radCardView1.CardTemplate.Size = new System.Drawing.Size(200, 250);
+            this.radCardView1.CardTemplate.TabIndex = 0;
+            this.radCardView1.Location = new System.Drawing.Point(203, 393);
+            this.radCardView1.Name = "radCardView1";
+            this.radCardView1.Size = new System.Drawing.Size(8, 8);
+            this.radCardView1.TabIndex = 0;
             // 
             // radLabel1
             // 
@@ -155,6 +175,9 @@ namespace Cafeteria_IS
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize) (this.radPictureBox1)).EndInit();
+            this.radPictureBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize) (this.radCardView1.CardTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radCardView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.radLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.radLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.radLabel3)).EndInit();
@@ -165,6 +188,9 @@ namespace Cafeteria_IS
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private Telerik.WinControls.UI.RadCardView radCardView1;
+        private Telerik.WinControls.UI.RadSaveFileDialog radSaveFileDialog1;
 
         #endregion
         private Telerik.WinControls.UI.RadPictureBox radPictureBox1;

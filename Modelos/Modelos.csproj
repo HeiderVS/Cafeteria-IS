@@ -144,6 +144,9 @@
     <ItemGroup>
         <Compile Include="CafeteriaDBContext.cs" />
         <Compile Include="Extension.cs" />
+        <Compile Include="Inventario\Categoria.cs" />
+        <Compile Include="Inventario\CategoriaEnum.cs" />
+        <Compile Include="Inventario\Producto.cs" />
         <Compile Include="Migrations\202112132148408_AddVentas.cs" />
         <Compile Include="Migrations\202112132148408_AddVentas.Designer.cs">
           <DependentUpon>202112132148408_AddVentas.cs</DependentUpon>

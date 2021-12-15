@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Modelos.Usuarios
@@ -10,9 +11,11 @@ namespace Modelos.Usuarios
         public String nombre { get; set; }
         public String apellidoMaterno { get; set; }
         public String apellidoPaterno { get; set; }
-        public virtual Roles rol { get; set; }
+        public int? rolId { get; set; }
+        [ForeignKey("rolId")]
+        public Roles rol { get; set; }
 
-        public String PasswordStored { get ; set; }
+        public String PasswordStored { get; set; }
 
         [NotMapped]
         public string Password

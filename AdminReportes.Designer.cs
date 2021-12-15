@@ -50,6 +50,7 @@ namespace Cafeteria_IS
             Telerik.WinControls.UI.GridViewComboBoxColumn gridViewComboBoxColumn16 = new Telerik.WinControls.UI.GridViewComboBoxColumn();
             Telerik.WinControls.UI.GridViewComboBoxColumn gridViewComboBoxColumn17 = new Telerik.WinControls.UI.GridViewComboBoxColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminReportes));
             this.enumBinder1 = new Telerik.WinControls.UI.Data.EnumBinder();
             this.enumBinder2 = new Telerik.WinControls.UI.Data.EnumBinder();
             this.enumBinder3 = new Telerik.WinControls.UI.Data.EnumBinder();
@@ -83,6 +84,7 @@ namespace Cafeteria_IS
             this.radMenuItem1 = new Telerik.WinControls.UI.RadMenuItem();
             this.radBtnReports = new Telerik.WinControls.UI.RadMenuItem();
             this.radDateReportEnd = new Telerik.WinControls.UI.RadDateTimePicker();
+            this.radBtnImprimir = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize) (this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.radGridView1)).BeginInit();
@@ -93,6 +95,7 @@ namespace Cafeteria_IS
             ((System.ComponentModel.ISupportInitialize) (this.radButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.radMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.radDateReportEnd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radBtnImprimir)).BeginInit();
             this.SuspendLayout();
             // 
             // enumBinder1
@@ -356,7 +359,7 @@ namespace Cafeteria_IS
             // radDateReportStart
             // 
             this.radDateReportStart.CalendarSize = new System.Drawing.Size(290, 320);
-            this.radDateReportStart.Location = new System.Drawing.Point(215, 292);
+            this.radDateReportStart.Location = new System.Drawing.Point(237, 256);
             this.radDateReportStart.MaxDate = new System.DateTime(2021, 12, 13, 0, 0, 0, 0);
             this.radDateReportStart.Name = "radDateReportStart";
             this.radDateReportStart.Size = new System.Drawing.Size(164, 36);
@@ -370,7 +373,7 @@ namespace Cafeteria_IS
             // radLabel3
             // 
             this.radLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.radLabel3.Location = new System.Drawing.Point(93, 301);
+            this.radLabel3.Location = new System.Drawing.Point(115, 265);
             this.radLabel3.Name = "radLabel3";
             this.radLabel3.Size = new System.Drawing.Size(116, 25);
             this.radLabel3.TabIndex = 1;
@@ -379,7 +382,7 @@ namespace Cafeteria_IS
             // radLabel4
             // 
             this.radLabel4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.radLabel4.Location = new System.Drawing.Point(449, 301);
+            this.radLabel4.Location = new System.Drawing.Point(471, 265);
             this.radLabel4.Name = "radLabel4";
             this.radLabel4.Size = new System.Drawing.Size(95, 23);
             this.radLabel4.TabIndex = 4;
@@ -390,7 +393,7 @@ namespace Cafeteria_IS
             // 
             this.radButton1.BackColor = System.Drawing.Color.Navy;
             this.radButton1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.radButton1.Location = new System.Drawing.Point(778, 290);
+            this.radButton1.Location = new System.Drawing.Point(800, 254);
             this.radButton1.Name = "radButton1";
             this.radButton1.Size = new System.Drawing.Size(275, 36);
             this.radButton1.TabIndex = 6;
@@ -452,7 +455,7 @@ namespace Cafeteria_IS
             // radDateReportEnd
             // 
             this.radDateReportEnd.CalendarSize = new System.Drawing.Size(290, 320);
-            this.radDateReportEnd.Location = new System.Drawing.Point(550, 292);
+            this.radDateReportEnd.Location = new System.Drawing.Point(572, 256);
             this.radDateReportEnd.MaxDate = new System.DateTime(2021, 12, 13, 0, 0, 0, 0);
             this.radDateReportEnd.Name = "radDateReportEnd";
             this.radDateReportEnd.Size = new System.Drawing.Size(164, 36);
@@ -463,12 +466,25 @@ namespace Cafeteria_IS
             this.radDateReportEnd.Value = new System.DateTime(2021, 12, 13, 0, 0, 0, 0);
             this.radDateReportEnd.ValueChanged += new System.EventHandler(this.radDateReportEnd_ValueChanged);
             // 
+            // radBtnImprimir
+            // 
+            this.radBtnImprimir.Image = ((System.Drawing.Image) (resources.GetObject("radBtnImprimir.Image")));
+            this.radBtnImprimir.Location = new System.Drawing.Point(78, 331);
+            this.radBtnImprimir.Name = "radBtnImprimir";
+            this.radBtnImprimir.Size = new System.Drawing.Size(120, 36);
+            this.radBtnImprimir.TabIndex = 9;
+            this.radBtnImprimir.Text = "Imprimir";
+            this.radBtnImprimir.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            this.radBtnImprimir.ThemeName = "Material";
+            this.radBtnImprimir.Click += new System.EventHandler(this.radBtnImprimir_Click);
+            // 
             // AdminReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1134, 845);
+            this.Controls.Add(this.radBtnImprimir);
             this.Controls.Add(this.radDateReportEnd);
             this.Controls.Add(this.radMenu1);
             this.Controls.Add(this.radButton1);
@@ -491,9 +507,12 @@ namespace Cafeteria_IS
             ((System.ComponentModel.ISupportInitialize) (this.radButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.radMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.radDateReportEnd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.radBtnImprimir)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private Telerik.WinControls.UI.RadButton radBtnImprimir;
 
         private Telerik.WinControls.UI.Data.EnumBinder enumBinder1;
         private Telerik.WinControls.UI.Data.EnumBinder enumBinder2;

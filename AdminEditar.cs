@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Controladores.Administrador;
 
 namespace Cafeteria_IS
 {
     public partial class AdminEditar : Form
     {
+        private UsuariosControlador _usuariosControlador = new UsuariosControlador();
         public AdminEditar()
         {
             InitializeComponent();
@@ -19,7 +21,7 @@ namespace Cafeteria_IS
 
         private void AdminEditar_Load(object sender, EventArgs e)
         {
-
+            radGridView1.DataSource = _usuariosControlador.GetUsuarios();
         }
 
         private void radMenuItem2_Click(object sender, EventArgs e)
@@ -83,8 +85,9 @@ namespace Cafeteria_IS
 
         private void btnEditarUsuarioExistente_Click(object sender, EventArgs e)
         {
-            Editar_Empleado_Existente frm = new Editar_Empleado_Existente();
-            frm.Show();
+            /*Editar_Empleado_Existente frm = new Editar_Empleado_Existente();
+            frm.Show();*/
+            this.radGridView1.PrintPreview();
         }
 
         private void txtBuscador_TextChanged(object sender, EventArgs e)
