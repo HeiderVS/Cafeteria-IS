@@ -147,40 +147,69 @@
         <Compile Include="Inventario\Categoria.cs" />
         <Compile Include="Inventario\CategoriaEnum.cs" />
         <Compile Include="Inventario\Producto.cs" />
-        <Compile Include="Migrations\202112132148408_AddVentas.cs" />
-        <Compile Include="Migrations\202112132148408_AddVentas.Designer.cs">
-          <DependentUpon>202112132148408_AddVentas.cs</DependentUpon>
+        <Compile Include="Migrations\202112160151266_AdministradorPuntoVenta.cs" />
+        <Compile Include="Migrations\202112160151266_AdministradorPuntoVenta.Designer.cs">
+          <DependentUpon>202112160151266_AdministradorPuntoVenta.cs</DependentUpon>
         </Compile>
-        <Compile Include="Migrations\202112140527143_AddUsuarios.cs" />
-        <Compile Include="Migrations\202112140527143_AddUsuarios.Designer.cs">
-          <DependentUpon>202112140527143_AddUsuarios.cs</DependentUpon>
+        <Compile Include="Migrations\202112160200044_ProductosVendidos.cs" />
+        <Compile Include="Migrations\202112160200044_ProductosVendidos.Designer.cs">
+          <DependentUpon>202112160200044_ProductosVendidos.cs</DependentUpon>
         </Compile>
-        <Compile Include="Migrations\202112140531522_AddRoles.cs" />
-        <Compile Include="Migrations\202112140531522_AddRoles.Designer.cs">
-          <DependentUpon>202112140531522_AddRoles.cs</DependentUpon>
+        <Compile Include="Migrations\202112160205258_RelacionProductoVenta.cs" />
+        <Compile Include="Migrations\202112160205258_RelacionProductoVenta.Designer.cs">
+          <DependentUpon>202112160205258_RelacionProductoVenta.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Migrations\202112160218578_RegistroVentas.cs" />
+        <Compile Include="Migrations\202112160218578_RegistroVentas.Designer.cs">
+          <DependentUpon>202112160218578_RegistroVentas.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Migrations\202112160242286_ForeignKeyVendedor.cs" />
+        <Compile Include="Migrations\202112160242286_ForeignKeyVendedor.Designer.cs">
+          <DependentUpon>202112160242286_ForeignKeyVendedor.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Migrations\202112160244298_FechaVenta.cs" />
+        <Compile Include="Migrations\202112160244298_FechaVenta.Designer.cs">
+          <DependentUpon>202112160244298_FechaVenta.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Migrations\202112170239332_VirtualVendedor.cs" />
+        <Compile Include="Migrations\202112170239332_VirtualVendedor.Designer.cs">
+          <DependentUpon>202112170239332_VirtualVendedor.cs</DependentUpon>
         </Compile>
         <Compile Include="Migrations\Configuration.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="ReporteViewModel.cs" />
+        <Compile Include="PuntoVenta\ProductosVendidos.cs" />
         <Compile Include="StringUtils.cs" />
         <Compile Include="Usuarios\Roles.cs" />
         <Compile Include="Usuarios\RolesEnum.cs" />
         <Compile Include="Usuarios\Usuario.cs" />
         <Compile Include="Usuarios\UsuarioViewModel.cs" />
+        <Compile Include="PuntoVenta\Ventas.cs" />
     </ItemGroup>
     <ItemGroup>
       <None Include="App.config" />
       <None Include="packages.config" />
     </ItemGroup>
     <ItemGroup>
-      <EmbeddedResource Include="Migrations\202112132148408_AddVentas.resx">
-        <DependentUpon>202112132148408_AddVentas.cs</DependentUpon>
+      <EmbeddedResource Include="Migrations\202112160151266_AdministradorPuntoVenta.resx">
+        <DependentUpon>202112160151266_AdministradorPuntoVenta.cs</DependentUpon>
       </EmbeddedResource>
-      <EmbeddedResource Include="Migrations\202112140527143_AddUsuarios.resx">
-        <DependentUpon>202112140527143_AddUsuarios.cs</DependentUpon>
+      <EmbeddedResource Include="Migrations\202112160200044_ProductosVendidos.resx">
+        <DependentUpon>202112160200044_ProductosVendidos.cs</DependentUpon>
       </EmbeddedResource>
-      <EmbeddedResource Include="Migrations\202112140531522_AddRoles.resx">
-        <DependentUpon>202112140531522_AddRoles.cs</DependentUpon>
+      <EmbeddedResource Include="Migrations\202112160205258_RelacionProductoVenta.resx">
+        <DependentUpon>202112160205258_RelacionProductoVenta.cs</DependentUpon>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Migrations\202112160218578_RegistroVentas.resx">
+        <DependentUpon>202112160218578_RegistroVentas.cs</DependentUpon>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Migrations\202112160242286_ForeignKeyVendedor.resx">
+        <DependentUpon>202112160242286_ForeignKeyVendedor.cs</DependentUpon>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Migrations\202112160244298_FechaVenta.resx">
+        <DependentUpon>202112160244298_FechaVenta.cs</DependentUpon>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Migrations\202112170239332_VirtualVendedor.resx">
+        <DependentUpon>202112170239332_VirtualVendedor.cs</DependentUpon>
       </EmbeddedResource>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

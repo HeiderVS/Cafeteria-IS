@@ -54,12 +54,5 @@ namespace Cafeteria_IS
         {
             Clear();
         }
-
-        private void radMenuLista_Click(object sender, EventArgs e)
-        {
-            InventarioProductos inventarioProductos = new InventarioProductos();
-            inventarioProductos.Show();
-            this.Hide();
-        }
     }
 }

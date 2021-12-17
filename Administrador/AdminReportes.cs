@@ -13,35 +13,10 @@ namespace Cafeteria_IS
             InitializeComponent();
         }
 
-        private void radMenuBtnAgregarUsuario_Click(object sender, EventArgs e)
-        {
-            AdminEditar frm = new AdminEditar();
-            frm.Show();
-            this.Hide();
-        }
-
-        private void radMenuItem2_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void radMenuItem5_Click(object sender, EventArgs e)
-        {
-            AdminEliminar frm = new AdminEliminar();
-            frm.Show();
-            this.Hide();
-        }
-
-        private void radMenuItem3_Click(object sender, EventArgs e)
-        {
-            UsuariosAgregar frm = new UsuariosAgregar();
-            frm.Show();
-            this.Hide();
-        }
-
         private void radDateReportStart_ValueChanged(object sender, EventArgs e)
         {
-            var startDate = this.radDateReportStart.Value;
-            var endDate = this.radDateReportEnd.Value;
+            /*var startDate = radDateReportStart.Value;
+            var endDate = radDateReportEnd.Value;
 
             if (DateTime.Compare(startDate, endDate) <= 0)
             {
@@ -49,13 +24,13 @@ namespace Cafeteria_IS
                 return;
             }
 
-            this.radDateReportStart.Value = DateTime.Today;
-            MessageBox.Show("La fecha inicial no puede ser mayor que la final");
+            this.radDateReportStart.Value = DateTime.Now;
+            MessageBox.Show("La fecha inicial no puede ser mayor que la final");*/
         }
 
         private void radDateReportEnd_ValueChanged(object sender, EventArgs e)
         {
-            var startDate = this.radDateReportStart.Value;
+            /*var startDate = this.radDateReportStart.Value;
             var endDate = this.radDateReportEnd.Value;
 
 
@@ -65,8 +40,8 @@ namespace Cafeteria_IS
                 return;
             }
 
-            this.radDateReportEnd.Value = DateTime.Today;
-            MessageBox.Show("La fecha final no puede ser menor que la inicial");
+            this.radDateReportEnd.Value = DateTime.Now;
+            MessageBox.Show("La fecha final no puede ser menor que la inicial");*/
         }
 
         private void radButton1_Click(object sender, EventArgs e)

@@ -7,13 +7,13 @@ namespace Modelos.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class AddVentas : IMigrationMetadata
+    public sealed partial class VirtualVendedor : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddVentas));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(VirtualVendedor));
         
         string IMigrationMetadata.Id
         {
-            get { return "202112132148408_AddVentas"; }
+            get { return "202112170239332_VirtualVendedor"; }
         }
         
         string IMigrationMetadata.Source

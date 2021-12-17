@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Cafeteria_IS.Administrador;
 using Controladores;
+using Controladores.Administrador;
 
 namespace Cafeteria_IS
 {
@@ -36,12 +37,17 @@ namespace Cafeteria_IS
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            int rol = _loginControlador.GetLogin(this.radTextBoxUsuario.Text, this.radTextBoxContraseña.Text);
-            switch (rol)
+            UsuarioInfoViewModel usuario =
+                _loginControlador.GetLogin(this.radTextBoxUsuario.Text, this.radTextBoxContraseña.Text);
+
+            if (usuario == null)
             {
-                case -1:
-                    MessageBox.Show("Usuario no valido");
-                    return;
+                MessageBox.Show("Usuario no valido");
+                return;
+            }
+            
+            switch (usuario.rol)
+            {
                 case 0:
                     /*UsuariosAgregar frm = new UsuariosAgregar();
                     frm.Show();*/
@@ -49,7 +55,7 @@ namespace Cafeteria_IS
                     admin.Show();
                     break;
                 case 1:
-                    Punto_de_Venta puntoDeVenta = new Punto_de_Venta();
+                    Punto_de_Venta puntoDeVenta = new Punto_de_Venta(usuario);
                     puntoDeVenta.Show();
                     break;
             }

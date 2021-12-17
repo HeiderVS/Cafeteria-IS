@@ -143,15 +143,18 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Administrador\AdminReportesControlador.cs" />
         <Compile Include="Administrador\CategoriaViewModel.cs" />
         <Compile Include="Administrador\InventarioControlador.cs" />
         <Compile Include="Administrador\ProductoViewModel.cs" />
+        <Compile Include="Administrador\ReporteViewModel.cs" />
         <Compile Include="Administrador\UsuarioInfoViewModel.cs" />
         <Compile Include="Administrador\UsuariosControlador.cs" />
         <Compile Include="Administrador\CredencialesViewModel.cs" />
-        <Compile Include="AdminReportesControlador.cs" />
         <Compile Include="LoginControlador.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Vendedor\ProductoCompraViewModel.cs" />
+        <Compile Include="Vendedor\PuntoVentaControlador.cs" />
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\Modelos\Modelos.csproj">

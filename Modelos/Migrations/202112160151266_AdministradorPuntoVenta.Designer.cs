@@ -7,18 +7,18 @@ namespace Modelos.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class AddUsuarios : IMigrationMetadata
+    public sealed partial class AdministradorPuntoVenta : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddUsuarios));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AdministradorPuntoVenta));
         
         string IMigrationMetadata.Id
         {
-            get { return "202112140527143_AddUsuarios"; }
+            get { return "202112160151266_AdministradorPuntoVenta"; }
         }
         
         string IMigrationMetadata.Source
         {
-            get { return Resources.GetString("Source"); }
+            get { return null; }
         }
         
         string IMigrationMetadata.Target

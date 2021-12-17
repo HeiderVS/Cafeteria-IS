@@ -9,5 +9,7 @@ namespace Controladores.Administrador
         public String paternal { get; set; }
         public String maternal { get; set; }
         public String username { get; set; }
+
+        public int rol;
     }
 }

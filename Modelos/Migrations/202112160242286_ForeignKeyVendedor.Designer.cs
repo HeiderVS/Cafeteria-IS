@@ -7,13 +7,13 @@ namespace Modelos.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class AddRoles : IMigrationMetadata
+    public sealed partial class ForeignKeyVendedor : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddRoles));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(ForeignKeyVendedor));
         
         string IMigrationMetadata.Id
         {
-            get { return "202112140531522_AddRoles"; }
+            get { return "202112160242286_ForeignKeyVendedor"; }
         }
         
         string IMigrationMetadata.Source
