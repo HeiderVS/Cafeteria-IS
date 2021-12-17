@@ -11,3 +11,6 @@ Presentación compartida donde se muestran los diagramas correspondientes para d
 
 ## [Prototipo.](https://www.figma.com/file/zUVZWv2q62oWpfe07mtLVE/IngSoftware_Prototipo?node-id=0%3A1)
 Prototipo elaborado en Figma con vistas y navegación para el sistema de punto de venta. 
+
+## [Telerik Winforms] (https://www.telerik.com/products/winforms.aspx)
+Para la interfaz de usuario se estan utilizando componentes de Telerik. Estos nos permiten agregar funcionalidades a las tablas tales como busqueda, celdas de seleccion, incremento numerico, etc...
