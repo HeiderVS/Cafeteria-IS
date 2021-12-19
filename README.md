@@ -95,6 +95,7 @@ Utilizamos SQL Server como sistema de gestion de Base de datos. Generamos una ba
 > Informacion de ordenes de compra realizadas en el sistema
 
 |Campo|Descripcion|
+|---|---------|
 |id|Identificador de orden de compra|
 |total|Monto pagado|
 |fecha|Fecha de orden de compra realizada|
@@ -105,6 +106,7 @@ Utilizamos SQL Server como sistema de gestion de Base de datos. Generamos una ba
 > Relacion de productos vendidos y la orden de compra a la que pertenecen.
 
 |Campo|Descripcion|
+|---|---------|
 |id|Identificador de producto vendido|
 |productoId|Identificador del producto registrado en el sistema|
 |ventaId|Identificador de orden de compra a la que pertenece el producto vendido|
