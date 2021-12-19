@@ -28,7 +28,84 @@ La version instalada para el desarrollo del proyecto corresponde [R3 2021 SP2 (v
 
 Es necesario integrar los RadControls de Telerik al toolbox del IDE, se anexa documentacion oficial. [Adding RadControls to Visual Studio Toolbox](https://docs.telerik.com/devtools/winforms/visual-studio-integration/adding-radcontrols-to-visual-studio-toolbox )
 
+### Entity Framework 
+Es una libreria que nos permite mapear bases de datos a objetos .NET. La version utilizada en el proyecto corresponde a 
+* EntityFramework 6.4.4 
+* EntityFrameworkCore 3.1.21
 
+![image](https://user-images.githubusercontent.com/40531216/146665804-c2cece31-78cf-41c9-a2f7-2a6457e9b4c9.png)
 
+### [SQL Server 2019 Express](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) 
+Utilizamos SQL Server como sistema de gestion de Base de datos. Generamos una base de datos en la cual crearemos las tablas de los modelos de datos de Entity Framework. Se anexa documentacion completa del procedimiento para generar las tablas creadas con Entity Framework en la base de datos SQL. 
 
+[How to generate a database using Entity Framework Model-First in ASP.NET](https://www.linkedin.com/pulse/how-generate-database-using-entity-framework-aspnet-negron-montero/)
 
+#### Diagrama de BD
+![image](https://user-images.githubusercontent.com/40531216/146666608-baed54a3-37f4-4faa-87d5-57c52ce11815.png)
+
+### Tablas
+
+#### Usuarios
+
+>Informacion de los usuarios administrador y vendedor, registrados en el sistema.
+
+|Campo|Descripcion|
+|---|---------|
+|id|Identificador del usuario en el sistema|
+|usuario|Nombre de usuario asignado por el sistema (3 letras por nombre y apellidos, seguido de un numero)|
+|nombre|Nombre de usuario|
+|apellidoPaterno|Apellido de usuario|
+|apellidoMaterno|Apellido de usuario|
+|rolID|Identificador de tipo de usuario (0 - Admin, 1 - Empleado)|
+|PasswordStored|Contrasena generada por el sistema, encriptada en BD|
+
+#### Roles 
+
+>Identificador y descripcion de los niveles de acceso al sistema. 
+
+|Campo|Descripcion|
+|---|---------|
+|id|Identificador del rol de usuario (0,1)|
+|rol|Descripcion del rol (Administrador, Vendedor)|
+
+#### Productos
+
+> Informacion del producto registrado en inventario y disponible en Punto de Venta. 
+
+|Campo|Descripcion|
+|---|---------|
+|id|Identificador del producto|
+|nombre|Nombre del producto registrado|
+|marca|Marca del producto registrado|
+|precio|Costo de venta por unidad|
+|cantidad|Numero de unidades disponibles|
+|categoriaId|Identificador de la categoria de productos dentro del sistema|
+
+#### Categorias
+
+> Listado de categorias de productos dentro del sistema. 
+
+|Campo|Descripcion|
+|---|---------|
+|id|Identificador de categoria|
+|id|Descripcion de categoria (Bebidas, botanas, yogures, energeticos, cereales, postres, helados, dulces y galletas.)|
+
+#### Ventas
+
+> Informacion de ordenes de compra realizadas en el sistema
+
+|Campo|Descripcion|
+|id|Identificador de orden de compra|
+|total|Monto pagado|
+|fecha|Fecha de orden de compra realizada|
+|vendedorId|Identificador de usuario que realizo la venta|
+
+#### ProductosVendidos|
+
+> Relacion de productos vendidos y la orden de compra a la que pertenecen.
+
+|Campo|Descripcion|
+|id|Identificador de producto vendido|
+|productoId|Identificador del producto registrado en el sistema|
+|ventaId|Identificador de orden de compra a la que pertenece el producto vendido|
+ 
