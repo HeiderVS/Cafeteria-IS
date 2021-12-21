@@ -1,0 +1,125 @@
+USE [Cafeteria-IS]
+GO
+/****** Object:  Table [dbo].[Categorias]    Script Date: 20/12/2021 18:38:29 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Categorias](
+	[id] [int] NOT NULL,
+	[categoria] [nvarchar](max) NULL,
+ CONSTRAINT [PK_dbo.Categorias] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Productoes]    Script Date: 20/12/2021 18:38:29 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Productoes](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[nombre] [nvarchar](max) NULL,
+	[marca] [nvarchar](max) NULL,
+	[precio] [decimal](18, 2) NOT NULL,
+	[cantidad] [int] NOT NULL,
+	[categoriaId] [int] NULL,
+ CONSTRAINT [PK_dbo.Productoes] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[ProductosVendidos]    Script Date: 20/12/2021 18:38:29 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ProductosVendidos](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[productoId] [int] NULL,
+	[Ventas_id] [int] NULL,
+ CONSTRAINT [PK_dbo.ProductosVendidos] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Roles]    Script Date: 20/12/2021 18:38:29 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Roles](
+	[id] [int] NOT NULL,
+	[rol] [nvarchar](max) NULL,
+ CONSTRAINT [PK_dbo.Roles] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Usuarios]    Script Date: 20/12/2021 18:38:29 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Usuarios](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[usuario] [nvarchar](max) NULL,
+	[nombre] [nvarchar](max) NULL,
+	[apellidoMaterno] [nvarchar](max) NULL,
+	[apellidoPaterno] [nvarchar](max) NULL,
+	[rolId] [int] NULL,
+	[PasswordStored] [nvarchar](max) NULL,
+ CONSTRAINT [PK_dbo.Usuarios] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Ventas]    Script Date: 20/12/2021 18:38:29 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Ventas](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[total] [decimal](18, 2) NOT NULL,
+	[vendedorId] [int] NULL,
+	[fecha] [datetime] NOT NULL,
+ CONSTRAINT [PK_dbo.Ventas] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[Ventas] ADD  DEFAULT ('1900-01-01T00:00:00.000') FOR [fecha]
+GO
+ALTER TABLE [dbo].[Productoes]  WITH CHECK ADD  CONSTRAINT [FK_dbo.Productoes_dbo.Categorias_categoriaId] FOREIGN KEY([categoriaId])
+REFERENCES [dbo].[Categorias] ([id])
+GO
+ALTER TABLE [dbo].[Productoes] CHECK CONSTRAINT [FK_dbo.Productoes_dbo.Categorias_categoriaId]
+GO
+ALTER TABLE [dbo].[ProductosVendidos]  WITH CHECK ADD  CONSTRAINT [FK_dbo.ProductosVendidos_dbo.Productoes_producto_id] FOREIGN KEY([productoId])
+REFERENCES [dbo].[Productoes] ([id])
+GO
+ALTER TABLE [dbo].[ProductosVendidos] CHECK CONSTRAINT [FK_dbo.ProductosVendidos_dbo.Productoes_producto_id]
+GO
+ALTER TABLE [dbo].[ProductosVendidos]  WITH CHECK ADD  CONSTRAINT [FK_dbo.ProductosVendidos_dbo.Ventas_Ventas_id] FOREIGN KEY([Ventas_id])
+REFERENCES [dbo].[Ventas] ([id])
+GO
+ALTER TABLE [dbo].[ProductosVendidos] CHECK CONSTRAINT [FK_dbo.ProductosVendidos_dbo.Ventas_Ventas_id]
+GO
+ALTER TABLE [dbo].[Usuarios]  WITH CHECK ADD  CONSTRAINT [FK_dbo.Usuarios_dbo.Roles_rolId] FOREIGN KEY([rolId])
+REFERENCES [dbo].[Roles] ([id])
+GO
+ALTER TABLE [dbo].[Usuarios] CHECK CONSTRAINT [FK_dbo.Usuarios_dbo.Roles_rolId]
+GO
+ALTER TABLE [dbo].[Ventas]  WITH CHECK ADD  CONSTRAINT [FK_dbo.Ventas_dbo.Usuarios_usuarioVendedor_id] FOREIGN KEY([vendedorId])
+REFERENCES [dbo].[Usuarios] ([id])
+GO
+ALTER TABLE [dbo].[Ventas] CHECK CONSTRAINT [FK_dbo.Ventas_dbo.Usuarios_usuarioVendedor_id]
+GO
