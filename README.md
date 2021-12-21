@@ -138,5 +138,5 @@ Se anexa documentacion de como generar el ConnectionString segun la configuracio
 |productoId|Identificador del producto registrado en el sistema|
 |ventaId|Identificador de orden de compra a la que pertenece el producto vendido|
 
-### [Matriz de Pruebas](https://docs.google.com/document/d/1sG8yo0S3KhbQsJgGiIOQJq9hIEQRfRCZqeJmT6Blb60/edit?usp=sharing)
+### [Matriz de Pruebas](https://docs.google.com/spreadsheets/d/1yhw-sq2-8JATrVUFlLAeTa_DvQsf3jyb/edit?usp=sharing&ouid=107285623204464205736&rtpof=true&sd=true)
 Documento excel con casos de prueba generados, resultados esperado y obtenidos. Observaciones obtenidas al ejecutar flujos y funciones. Los casos de prueba se definen a partir del documento de requerimientos.  
