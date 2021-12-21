@@ -43,6 +43,9 @@ Utilizamos SQL Server como sistema de gestion de Base de datos. Generamos una ba
 #### Diagrama de BD
 ![image](https://user-images.githubusercontent.com/40531216/146666608-baed54a3-37f4-4faa-87d5-57c52ce11815.png)
 
+#### ConnectionStrings
+
+
 ### Tablas
 
 #### Usuarios
