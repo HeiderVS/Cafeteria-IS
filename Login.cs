@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Cafeteria_IS.Administrador;
 using Controladores;
@@ -37,30 +30,38 @@ namespace Cafeteria_IS
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            UsuarioInfoViewModel usuario =
-                _loginControlador.GetLogin(this.radTextBoxUsuario.Text, this.radTextBoxContraseña.Text);
-
-            if (usuario == null)
+            if (ValidateCredenciales())
             {
-                MessageBox.Show("Usuario no valido");
-                return;
-            }
+                UsuarioInfoViewModel usuario =
+                    _loginControlador.GetLogin(this.radTextBoxUsuario.Text, this.radTextBoxContraseña.Text);
+
+                if (usuario == null)
+                {
+                    MessageBox.Show("Usuario no válido");
+                    return;
+                }
             
-            switch (usuario.rol)
-            {
-                case 0:
-                    /*UsuariosAgregar frm = new UsuariosAgregar();
-                    frm.Show();*/
-                    PanelAdministrador admin = new PanelAdministrador();
-                    admin.Show();
-                    break;
-                case 1:
-                    Punto_de_Venta puntoDeVenta = new Punto_de_Venta(usuario);
-                    puntoDeVenta.Show();
-                    break;
-            }
+                switch (usuario.rol)
+                {
+                    case 0:
+                        PanelAdministrador admin = new PanelAdministrador();
+                        admin.Show();
+                        break;
+                    case 1:
+                        Punto_de_Venta puntoDeVenta = new Punto_de_Venta(usuario);
+                        puntoDeVenta.Show();
+                        break;
+                }
 
-            this.Hide();
+                this.Hide();
+            }
+        }
+
+        private bool ValidateCredenciales()
+        {
+            bool validateUser = ValidationUtils.TextBoxEmptyValidation(this.radTextBoxUsuario, this.errorProvider1);
+            bool validatePass = ValidationUtils.TextBoxEmptyValidation(this.radTextBoxContraseña, this.errorProvider1);
+            return validatePass && validateUser;
         }
 
         private void radRadioButton1_ToggleStateChanged(object sender,

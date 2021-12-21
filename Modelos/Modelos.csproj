@@ -175,6 +175,14 @@
         <Compile Include="Migrations\202112170239332_VirtualVendedor.Designer.cs">
           <DependentUpon>202112170239332_VirtualVendedor.cs</DependentUpon>
         </Compile>
+        <Compile Include="Migrations\202112210914024_producto_activo.cs" />
+        <Compile Include="Migrations\202112210914024_producto_activo.Designer.cs">
+          <DependentUpon>202112210914024_producto_activo.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Migrations\202112210958222_usuario_activo.cs" />
+        <Compile Include="Migrations\202112210958222_usuario_activo.Designer.cs">
+          <DependentUpon>202112210958222_usuario_activo.cs</DependentUpon>
+        </Compile>
         <Compile Include="Migrations\Configuration.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="PuntoVenta\ProductosVendidos.cs" />
@@ -210,6 +218,12 @@
       </EmbeddedResource>
       <EmbeddedResource Include="Migrations\202112170239332_VirtualVendedor.resx">
         <DependentUpon>202112170239332_VirtualVendedor.cs</DependentUpon>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Migrations\202112210914024_producto_activo.resx">
+        <DependentUpon>202112210914024_producto_activo.cs</DependentUpon>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Migrations\202112210958222_usuario_activo.resx">
+        <DependentUpon>202112210958222_usuario_activo.cs</DependentUpon>
       </EmbeddedResource>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

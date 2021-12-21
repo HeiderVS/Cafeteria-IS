@@ -1,4 +1,5 @@
 using System.ComponentModel;
+using Telerik.WinControls.UI;
 
 namespace Cafeteria_IS
 {
@@ -59,6 +60,9 @@ namespace Cafeteria_IS
             this.radGridProductos.Size = new System.Drawing.Size(1110, 535);
             this.radGridProductos.TabIndex = 20;
             this.radGridProductos.ThemeName = "Material";
+            this.radGridProductos.CellEndEdit += new GridViewCellEventHandler(this.radGridProductos_CellEvent);
+            this.radGridProductos.RowsChanged +=
+                new GridViewCollectionChangedEventHandler(this.radGridProductos_CollectionChanged);
             // 
             // radLabel1
             // 

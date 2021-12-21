@@ -12,7 +12,8 @@ namespace Modelos.Inventario
         public decimal precio { set; get; }
         public int cantidad { set; get; }
         public int? categoriaId { get; set; }
-
         [ForeignKey("categoriaId")] public Categoria categoria { get; set; }
+        
+        public bool activo { get; set; }
     }
 }

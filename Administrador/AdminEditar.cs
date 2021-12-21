@@ -7,7 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Cafeteria_IS.Administrador;
 using Controladores.Administrador;
+using Telerik.WinControls.Data;
+using Telerik.WinControls.UI;
 
 namespace Cafeteria_IS
 {
@@ -60,6 +63,33 @@ namespace Cafeteria_IS
             /*Editar_Empleado_Existente frm = new Editar_Empleado_Existente();
             frm.Show();*/
             this.radGridView1.PrintPreview();
+        }
+
+        private void radGridView1_CollectionChanged(object sender, GridViewCollectionChangedEventArgs e)
+        {
+            if (e.Action == NotifyCollectionChangedAction.Remove)
+            {
+                foreach (GridViewDataRowInfo rowInfo in e.NewItems)
+                {
+                    _usuariosControlador.EliminarUsuario((UsuarioInfoViewModel) rowInfo.DataBoundItem);
+                }
+            }
+        }
+
+        private void radGridView1_ValueChanging(object sender, GridViewCollectionChangingEventArgs e)
+        {
+            if (e.Action == NotifyCollectionChangedAction.Remove)
+            {
+                var value = "";
+                if (AuthenticationBox.Show("Autenticacion", "Ingrese la contrasena de administrador", ref value) !=
+                    DialogResult.OK) e.Cancel = true;
+
+                if (_usuariosControlador.AuthAdministrador(value) == null)
+                {
+                    MessageBox.Show("Usuario no valido");
+                    e.Cancel = true;
+                }
+            }
         }
     }
 }

@@ -29,6 +29,7 @@ namespace Cafeteria_IS
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.radPictureBox1 = new Telerik.WinControls.UI.RadPictureBox();
             this.radCardView1 = new Telerik.WinControls.UI.RadCardView();
@@ -40,6 +41,7 @@ namespace Cafeteria_IS
             this.radTextBoxContraseña = new Telerik.WinControls.UI.RadTextBox();
             this.btnMostrarContra = new Telerik.WinControls.UI.RadRadioButton();
             this.radSaveFileDialog1 = new Telerik.WinControls.UI.RadSaveFileDialog();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize) (this.radPictureBox1)).BeginInit();
             this.radPictureBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.radCardView1)).BeginInit();
@@ -51,6 +53,7 @@ namespace Cafeteria_IS
             ((System.ComponentModel.ISupportInitialize) (this.radTextBoxUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.radTextBoxContraseña)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.btnMostrarContra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // radPictureBox1
@@ -156,6 +159,10 @@ namespace Cafeteria_IS
             this.btnMostrarContra.Text = "Mostrar Contraseña";
             this.btnMostrarContra.ToggleStateChanged += new Telerik.WinControls.UI.StateChangedEventHandler(this.radRadioButton1_ToggleStateChanged);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -185,9 +192,12 @@ namespace Cafeteria_IS
             ((System.ComponentModel.ISupportInitialize) (this.radTextBoxUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.radTextBoxContraseña)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.btnMostrarContra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.ErrorProvider errorProvider1;
 
         private Telerik.WinControls.UI.RadCardView radCardView1;
         private Telerik.WinControls.UI.RadSaveFileDialog radSaveFileDialog1;

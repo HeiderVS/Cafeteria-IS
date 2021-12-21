@@ -1,4 +1,6 @@
 ﻿
+using System.Windows.Forms;
+
 namespace Cafeteria_IS
 {
     partial class UsuariosAgregar
@@ -275,6 +277,7 @@ namespace Cafeteria_IS
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            this.errorProvider1.BlinkStyle = ErrorBlinkStyle.NeverBlink;
             // 
             // UsuariosAgregar
             // 

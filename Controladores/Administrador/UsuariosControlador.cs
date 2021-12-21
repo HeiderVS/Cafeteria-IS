@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using Modelos;
 using Modelos.Usuarios;
+using EntityState = System.Data.Entity.EntityState;
 
 namespace Controladores.Administrador
 {
@@ -18,7 +20,8 @@ namespace Controladores.Administrador
                 apellidoMaterno = maternal,
                 Password = StringUtils.CreateRandom(),
                 usuario = StringUtils.CreateUsername(name, paternal, maternal),
-                rolId = (int) RolesEnum.Vendedor
+                rolId = (int) RolesEnum.Vendedor,
+                activo = true
             });
             cafeteriaDbContext.SaveChanges();
             return new CredencialesViewModel
@@ -33,6 +36,7 @@ namespace Controladores.Administrador
             using (CafeteriaDBContext dbContext = new CafeteriaDBContext())
             {
                 return (from user in dbContext.Usuarios
+                        where user.activo == true && user.rolId == 1
                         select new UsuarioInfoViewModel
                         {
                             id = user.id,
@@ -43,6 +47,42 @@ namespace Controladores.Administrador
                         })
                     .ToList();
             }
+        }
+
+        public UsuarioInfoViewModel AuthAdministrador(string pass)
+        {
+            if (pass == "") return null;
+
+            using CafeteriaDBContext dbContext = new CafeteriaDBContext();
+            return dbContext.Usuarios
+                .Include(u => u.rol)
+                .ToList()
+                .Where(c => c.rolId == 0 && c.Password.Equals(pass))
+                .Select(userSelect => new UsuarioInfoViewModel()
+                {
+                    id = userSelect.id,
+                    maternal = userSelect.apellidoMaterno,
+                    paternal = userSelect.apellidoPaterno,
+                    name = userSelect.nombre,
+                    username = userSelect.usuario,
+                    rol = userSelect.rolId ?? -1
+                })
+                .SingleOrDefault();
+        }
+
+        public Usuario GetUsuarioById(UsuarioInfoViewModel usuarioViewModel)
+        {
+            using CafeteriaDBContext dbContext = new CafeteriaDBContext();
+            return dbContext.Usuarios.Find(usuarioViewModel.id);
+        }
+
+        public void EliminarUsuario(UsuarioInfoViewModel usuarioInfoViewModel)
+        {
+            using CafeteriaDBContext dbContext = new CafeteriaDBContext();
+            Usuario editUsuario = GetUsuarioById(usuarioInfoViewModel);
+            editUsuario.activo = false;
+            dbContext.Entry(editUsuario).State = EntityState.Modified;
+            dbContext.SaveChanges();
         }
     }
 }

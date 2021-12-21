@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using Modelos;
 using Modelos.Inventario;
@@ -24,6 +25,7 @@ namespace Controladores.Administrador
         {
             using CafeteriaDBContext dbContext = new CafeteriaDBContext();
             return (from producto in dbContext.Productos
+                where producto.activo == true
                 select new ProductoViewModel
                 {
                     categoria = producto.categoria.categoria,
@@ -32,6 +34,12 @@ namespace Controladores.Administrador
                     nombre = producto.nombre,
                     precio = producto.precio
                 }).ToList();
+        }
+
+        public Producto GetProductoById(ProductoViewModel productoVm)
+        {
+            using CafeteriaDBContext dbContext = new CafeteriaDBContext();
+            return dbContext.Productos.Find(productoVm.id);
         }
 
         public void RegistraProducto(String nombre, String marca, int categoria, Decimal precio, int cantidad)
@@ -43,9 +51,34 @@ namespace Controladores.Administrador
                 categoriaId = categoria,
                 marca = marca,
                 nombre = nombre,
-                precio = precio
+                precio = precio,
+                activo = true
             });
             dbContext.SaveChanges();
+        }
+
+        public void EliminarProducto(ProductoViewModel producto)
+        {
+            using (CafeteriaDBContext dbContext = new CafeteriaDBContext())
+            {
+                Producto editProducto = GetProductoById(producto);
+                editProducto.activo = false;
+                dbContext.Entry(editProducto).State = EntityState.Modified;
+                dbContext.SaveChanges();
+            }
+        }
+
+        public void ActualizarProducto(ProductoViewModel producto)
+        {
+            using (CafeteriaDBContext dbContext = new CafeteriaDBContext())
+            {
+                Producto editProducto = GetProductoById(producto);
+                editProducto.nombre = producto.nombre;
+                editProducto.marca = producto.marca;
+                editProducto.precio = producto.precio;
+                dbContext.Entry(editProducto).State = EntityState.Modified;
+                dbContext.SaveChanges();
+            }
         }
     }
 }

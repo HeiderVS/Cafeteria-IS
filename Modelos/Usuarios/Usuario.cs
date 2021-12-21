@@ -14,7 +14,7 @@ namespace Modelos.Usuarios
         public int? rolId { get; set; }
         [ForeignKey("rolId")]
         public Roles rol { get; set; }
-
+        public bool activo { get; set; }
         public String PasswordStored { get; set; }
 
         [NotMapped]

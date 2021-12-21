@@ -59,7 +59,7 @@ namespace Cafeteria_IS
 
         private void radButton1_Click(object sender, EventArgs e)
         {
-            BorrarMensajesError();
+            //BorrarMensajesError();
             if (ValidarCampos())
             {
                 MessageBox.Show("Credenciales Generadas con Exito", "Credenciales", MessageBoxButtons.OK,
@@ -77,58 +77,16 @@ namespace Cafeteria_IS
 
                 txtNomUsuario.Text = userCredentials.username;
                 txtContraAgregarUsuario.Text = userCredentials.generatedPassword;
-
-                /*
-                 *
-                 * string NomU = Convert.ToString(txtNombre.Text).Substring(0, 3) +
-                              Convert.ToString(txtApPaterno.Text).Substring(0, 3) +
-                              Convert.ToString(txtApMaterno.Text).Substring(0, 3);
-                txtNomUsuario.Text = NomU;
-
-                //Generando Contraseña Aleatoria
-                Random rdn = new Random();
-                string caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890=+/?*&#";
-                int longitud = caracteres.Length;
-                char letra;
-                int longitudContrasenia = 10;
-                string contraseniaAleatoria = string.Empty;
-                for (int i = 0; i < longitudContrasenia; i++)
-                {
-                    letra = caracteres[rdn.Next(longitud)];
-                    contraseniaAleatoria += letra.ToString();
-                }
-
-                txtContraAgregarUsuario.Text = contraseniaAleatoria;
-                //-----------------------------------------------------------------------
-                 */
             }
-
-            ValidarCampos();
         }
 
 
         private bool ValidarCampos()
         {
-            bool ok = true;
-            if (txtNombre.Text == "")
-            {
-                ok = false;
-                errorProvider1.SetError(txtNombre, "Ingrese un Nombre Valido (Solo letras)");
-            }
-
-            if (txtApPaterno.Text == "")
-            {
-                ok = false;
-                errorProvider1.SetError(txtApPaterno, "Ingrese un Apellido Valido (Solo letras)");
-            }
-
-            if (txtApMaterno.Text == "")
-            {
-                ok = false;
-                errorProvider1.SetError(txtApMaterno, "Ingrese un Apellido Valido (Solo letras)");
-            }
-
-            return ok;
+            bool validationNombre = ValidationUtils.TextBoxCharactersValidation(txtNombre, errorProvider1);
+            bool validationPaterno = ValidationUtils.TextBoxCharactersValidation(txtApPaterno, errorProvider1);
+            bool validationMaterno = ValidationUtils.TextBoxCharactersValidation(txtApMaterno, errorProvider1);
+            return  validationNombre && validationPaterno && validationMaterno;
         }
 
         private void BorrarMensajesError()

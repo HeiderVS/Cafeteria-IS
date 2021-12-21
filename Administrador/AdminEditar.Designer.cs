@@ -1,4 +1,7 @@
 ﻿
+using Telerik.WinControls.UI;
+using Telerik.WinControls.UI.Data;
+
 namespace Cafeteria_IS
 {
     partial class AdminEditar
@@ -96,6 +99,9 @@ namespace Cafeteria_IS
             this.radGridView1.Size = new System.Drawing.Size(1033, 500);
             this.radGridView1.TabIndex = 11;
             this.radGridView1.ThemeName = "Material";
+            this.radGridView1.RowsChanging += new GridViewCollectionChangingEventHandler(this.radGridView1_ValueChanging);
+            this.radGridView1.RowsChanged +=
+                new GridViewCollectionChangedEventHandler(this.radGridView1_CollectionChanged);
             // 
             // radButton2
             // 

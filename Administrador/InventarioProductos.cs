@@ -1,6 +1,8 @@
 using System;
 using System.Windows.Forms;
 using Controladores.Administrador;
+using Telerik.WinControls.Data;
+using Telerik.WinControls.UI;
 
 namespace Cafeteria_IS
 {
@@ -23,6 +25,22 @@ namespace Cafeteria_IS
             if (this.radGridProductos.RowCount > 0)
             {
                 this.radGridProductos.PrintPreview();
+            }
+        }
+
+        private void radGridProductos_CellEvent(object sender, EventArgs eventArgs)
+        {
+            _inventarioControlador.ActualizarProducto((ProductoViewModel) ((GridViewCellEventArgs)eventArgs).Row.DataBoundItem);
+        }
+
+        private void radGridProductos_CollectionChanged(object sender, GridViewCollectionChangedEventArgs e)
+        {
+            if (e.Action == NotifyCollectionChangedAction.Remove)
+            {
+                foreach (GridViewDataRowInfo rowInfo in e.NewItems)
+                {
+                    _inventarioControlador.EliminarProducto((ProductoViewModel) rowInfo.DataBoundItem);
+                }
             }
         }
     }
