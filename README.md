@@ -110,4 +110,6 @@ Utilizamos SQL Server como sistema de gestion de Base de datos. Generamos una ba
 |id|Identificador de producto vendido|
 |productoId|Identificador del producto registrado en el sistema|
 |ventaId|Identificador de orden de compra a la que pertenece el producto vendido|
- 
+
+### [Matriz de Pruebas](https://docs.google.com/document/d/1sG8yo0S3KhbQsJgGiIOQJq9hIEQRfRCZqeJmT6Blb60/edit?usp=sharing)
+Documento excel con casos de prueba generados, resultados esperado y obtenidos. Observaciones obtenidas al ejecutar flujos y funciones. Los casos de prueba se definen a partir del documento de requerimientos.  
