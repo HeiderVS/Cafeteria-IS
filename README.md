@@ -45,6 +45,13 @@ Utilizamos SQL Server como sistema de gestion de Base de datos. Generamos una ba
 
 #### ConnectionStrings
 
+````
+<connectionStrings>
+        <add name="SQLEXPRESS"
+             connectionString="Server=localhost\SQLEXPRESS;Initial Catalog=Cafeteria-IS;Integrated Security=True;"
+             providerName="System.Data.SqlClient" />
+</connectionStrings>
+````
 
 ### Tablas
 
