@@ -32,6 +32,7 @@ Es necesario integrar los RadControls de Telerik al toolbox del IDE, se anexa do
 Es una libreria que nos permite mapear bases de datos a objetos .NET. La version utilizada en el proyecto corresponde a 
 * EntityFramework 6.4.4 
 * EntityFrameworkCore 3.1.21
+* EntityFrameworkTools
 
 ![image](https://user-images.githubusercontent.com/40531216/146665804-c2cece31-78cf-41c9-a2f7-2a6457e9b4c9.png)
 
