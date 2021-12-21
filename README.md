@@ -52,6 +52,23 @@ Utilizamos SQL Server como sistema de gestion de Base de datos. Generamos una ba
              providerName="System.Data.SqlClient" />
 </connectionStrings>
 ````
+La cadena ConnectionStrings contiene la informacion para establecer la conexion entre la base de datos y la aplicacion. La que se muestra por ejemplo consta de 
+
+|Atributo|Descripcion|
+|---|---------|
+|name|Nombre de la cadena de conexion, es a la que hacemos referencia dentro del codigo|
+|connectionString|Parametros para establecer conexion con el servidor. En este caso tenemos que es un localhost de nombre SQLEXPRESS, el initialCatalog es el nombre de la DB del proyecto e Integrated Security=true indica que el acceso es mediante Windows Authentication, con el usuario actual del sistema|
+|providerName|Proveedor de base de datos SQL Server|
+
+Esta cadena se encuentra en los archivos app.config en `<configuration>` dentro de Cafeteria-IS, Controladores y Modelos.
+
+* [Cafeteria-IS App.Config](blob/master/App.config)
+* [Controladores App.Config](blob/master/Controladores/App.config)
+* [Modelos App.Config](blob/master/Modelos/App.config)
+
+Se anexa documentacion de como generar el ConnectionString segun la configuracion de acceso a SQL SERVER. 
+[SQL Server Connection Strings](https://www.connectionstrings.com/sql-server/)
+
 
 ### Tablas
 
