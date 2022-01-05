@@ -35,14 +35,15 @@ namespace Cafeteria_IS.Administrador
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
             this.radMenu1 = new Telerik.WinControls.UI.RadMenu();
             this.radMenuItem2 = new Telerik.WinControls.UI.RadMenuItem();
-            this.radMenuItem4 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem5 = new Telerik.WinControls.UI.RadMenuItem();
-            this.radMenuSeparatorItem1 = new Telerik.WinControls.UI.RadMenuSeparatorItem();
-            this.radMenuItem3 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem1 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem6 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem7 = new Telerik.WinControls.UI.RadMenuItem();
             this.radBtnReports = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuItem4 = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuSeparatorItem1 = new Telerik.WinControls.UI.RadMenuSeparatorItem();
+            this.radMenuItem3 = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuItem8 = new Telerik.WinControls.UI.RadMenuItem();
             ((System.ComponentModel.ISupportInitialize) (this.radPanel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.radMenu1)).BeginInit();
             this.SuspendLayout();
@@ -70,37 +71,16 @@ namespace Cafeteria_IS.Administrador
             // 
             // radMenuItem2
             // 
-            this.radMenuItem2.Items.AddRange(new Telerik.WinControls.RadItem[] {this.radMenuItem4, this.radMenuItem5, this.radMenuSeparatorItem1, this.radMenuItem3});
+            this.radMenuItem2.Items.AddRange(new Telerik.WinControls.RadItem[] {this.radMenuItem5, this.radMenuItem8});
             this.radMenuItem2.Name = "radMenuItem2";
             this.radMenuItem2.Text = "Usuarios";
             this.radMenuItem2.UseCompatibleTextRendering = false;
             // 
-            // radMenuItem4
-            // 
-            this.radMenuItem4.Name = "radMenuItem4";
-            this.radMenuItem4.Text = "Editar";
-            this.radMenuItem4.UseCompatibleTextRendering = false;
-            this.radMenuItem4.Click += new System.EventHandler(this.radMenuItem4_Click);
-            // 
             // radMenuItem5
             // 
             this.radMenuItem5.Name = "radMenuItem5";
-            this.radMenuItem5.Text = "Eliminar";
-            this.radMenuItem5.UseCompatibleTextRendering = false;
-            // 
-            // radMenuSeparatorItem1
-            // 
-            this.radMenuSeparatorItem1.Name = "radMenuSeparatorItem1";
-            this.radMenuSeparatorItem1.Text = "radMenuSeparatorItem1";
-            this.radMenuSeparatorItem1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.radMenuSeparatorItem1.UseCompatibleTextRendering = false;
-            // 
-            // radMenuItem3
-            // 
-            this.radMenuItem3.Name = "radMenuItem3";
-            this.radMenuItem3.Text = "Agregar";
-            this.radMenuItem3.UseCompatibleTextRendering = false;
-            this.radMenuItem3.Click += new System.EventHandler(this.radMenuItem3_Click);
+            this.radMenuItem5.Text = "Agregar usuario";
+            this.radMenuItem5.Click += new System.EventHandler(this.radMenuItem5_Click);
             // 
             // radMenuItem1
             // 
@@ -128,6 +108,32 @@ namespace Cafeteria_IS.Administrador
             this.radBtnReports.UseCompatibleTextRendering = false;
             this.radBtnReports.Click += new System.EventHandler(this.radBtnReports_Click);
             // 
+            // radMenuItem4
+            // 
+            this.radMenuItem4.Name = "radMenuItem4";
+            this.radMenuItem4.Text = "Editar";
+            this.radMenuItem4.UseCompatibleTextRendering = false;
+            //this.radMenuItem4.Click += new System.EventHandler(this.radMenuItem4_Click);
+            // 
+            // radMenuSeparatorItem1
+            // 
+            this.radMenuSeparatorItem1.Name = "radMenuSeparatorItem1";
+            this.radMenuSeparatorItem1.Text = "radMenuSeparatorItem1";
+            this.radMenuSeparatorItem1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radMenuSeparatorItem1.UseCompatibleTextRendering = false;
+            // 
+            // radMenuItem3
+            // 
+            this.radMenuItem3.Name = "radMenuItem3";
+            this.radMenuItem3.Text = "Agregar";
+            this.radMenuItem3.UseCompatibleTextRendering = false;
+            // 
+            // radMenuItem8
+            // 
+            this.radMenuItem8.Name = "radMenuItem8";
+            this.radMenuItem8.Text = "Lista de usuarios";
+            this.radMenuItem8.Click += new System.EventHandler(this.radMenuItem8_Click);
+            // 
             // PanelAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -145,13 +151,16 @@ namespace Cafeteria_IS.Administrador
             this.PerformLayout();
         }
 
+        private Telerik.WinControls.UI.RadMenuItem radMenuItem8;
+
+        private Telerik.WinControls.UI.RadMenuItem radMenuItem5;
+
         private Telerik.WinControls.UI.RadMenuItem radMenuItem7;
 
         private Telerik.WinControls.UI.RadMenuItem radMenuItem6;
 
         private Telerik.WinControls.UI.RadMenuItem radMenuItem2;
         private Telerik.WinControls.UI.RadMenuItem radMenuItem4;
-        private Telerik.WinControls.UI.RadMenuItem radMenuItem5;
         private Telerik.WinControls.UI.RadMenuSeparatorItem radMenuSeparatorItem1;
         private Telerik.WinControls.UI.RadMenuItem radMenuItem3;
         private Telerik.WinControls.UI.RadMenuItem radMenuItem1;

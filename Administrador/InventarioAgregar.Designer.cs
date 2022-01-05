@@ -1,4 +1,5 @@
 using System.ComponentModel;
+using System.Windows.Forms;
 
 namespace Cafeteria_IS
 {
@@ -31,6 +32,7 @@ namespace Cafeteria_IS
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InventarioAgregar));
             this.btnCancelarAgrUsuario = new Telerik.WinControls.UI.RadLabel();
             this.lbl1 = new Telerik.WinControls.UI.RadLabel();
@@ -49,6 +51,7 @@ namespace Cafeteria_IS
             this.radLabel7 = new Telerik.WinControls.UI.RadLabel();
             this.radSpinPrecio = new Telerik.WinControls.UI.RadSpinEditor();
             this.radSpinCantidad = new Telerik.WinControls.UI.RadSpinEditor();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize) (this.btnCancelarAgrUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.lbl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.radLabel6)).BeginInit();
@@ -66,6 +69,7 @@ namespace Cafeteria_IS
             ((System.ComponentModel.ISupportInitialize) (this.radLabel7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.radSpinPrecio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.radSpinCantidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancelarAgrUsuario
@@ -233,6 +237,10 @@ namespace Cafeteria_IS
             this.radSpinCantidad.TabIndex = 35;
             this.radSpinCantidad.ThemeName = "Material";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // InventarioAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,9 +282,12 @@ namespace Cafeteria_IS
             ((System.ComponentModel.ISupportInitialize) (this.radLabel7)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.radSpinPrecio)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.radSpinCantidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.ErrorProvider errorProvider1;
 
         private Telerik.WinControls.UI.RadSpinEditor radSpinCantidad;
 

@@ -26,36 +26,15 @@ namespace Cafeteria_IS
         private void AdminEditar_Load(object sender, EventArgs e)
         {
             radGridView1.DataSource = _usuariosControlador.GetUsuarios();
+            radGridView1.Columns[0].ReadOnly = true;
+            radGridView1.Columns[4].ReadOnly = true;
         }
 
         private void radButton2_Click(object sender, EventArgs e)
         {
-            MessageBoxButtons botones = MessageBoxButtons.YesNo;
-            DialogResult dr = MessageBox.Show("Desea generar una nueva contraseña para este empleado?", "Confirmacion",
-                botones, MessageBoxIcon.Warning);
-            if (dr == DialogResult.Yes)
-            {
-                //Generando Contraseña Aleatoria
-                Random rdn = new Random();
-                string caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890=+/?*&#";
-                int longitud = caracteres.Length;
-                char letra;
-                int longitudContrasenia = 10;
-                string contraseniaAleatoria = string.Empty;
-                for (int i = 0; i < longitudContrasenia; i++)
-                {
-                    letra = caracteres[rdn.Next(longitud)];
-                    contraseniaAleatoria += letra.ToString();
-                }
-
-                //-----------------------------------------------------------------------
-                MessageBox.Show("Contraseña Generada con exito", "Contraseña Generada", MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-                Clipboard.SetDataObject(contraseniaAleatoria, true);
-                MessageBox.Show(
-                    "Su nueva Contraseña es: " + contraseniaAleatoria + "\n\n Contraseña copiada al portapapeles",
-                    "Nueva Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            Editar_Empleado_Existente editarEmpleadoExistente =
+                new Editar_Empleado_Existente((UsuarioInfoViewModel) this.radGridView1.CurrentRow.DataBoundItem);
+            editarEmpleadoExistente.Show();
         }
 
         private void btnEditarUsuarioExistente_Click(object sender, EventArgs e)
@@ -90,6 +69,34 @@ namespace Cafeteria_IS
                     e.Cancel = true;
                 }
             }
+        }
+
+        private void radGridView1_CellValidating(object sender, CellValidatingEventArgs e)
+        {
+            if (e.ActiveEditor == null) return;
+
+            if ((string) e.Value != "" && ((string) e.Value).All(char.IsLetter)) return;
+            
+            e.Cancel = true;
+            MessageBox.Show("Caracter no permitido");
+        }
+
+        private void radGridView1_CellEvent(object sender, EventArgs eventArgs)
+        {
+            var value = "";
+
+            if (AuthenticationBox.Show("Autenticacion", "Ingrese la contrasena de administrador", ref value) !=
+                DialogResult.OK) return;
+
+            if (_usuariosControlador.AuthAdministrador(value) == null)
+            {
+                MessageBox.Show("Usuario no valido");
+                radGridView1.DataSource = _usuariosControlador.GetUsuarios();
+                return;
+            }
+
+            _usuariosControlador.ActualizarUsuario(
+                (UsuarioInfoViewModel) ((GridViewCellEventArgs) eventArgs).Row.DataBoundItem);
         }
     }
 }

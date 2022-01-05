@@ -15,12 +15,12 @@ namespace Cafeteria_IS.Administrador
             OpenAgregarUsuarios();
         }
         
-        private void radMenuItem3_Click(object sender, EventArgs e)
+        private void radMenuItem5_Click(object sender, EventArgs e)
         {
             OpenAgregarUsuarios();
         }
         
-        private void radMenuItem4_Click(object sender, EventArgs e)
+        private void radMenuItem8_Click(object sender, EventArgs e)
         {
             OpenEditarUsuarios();
         }

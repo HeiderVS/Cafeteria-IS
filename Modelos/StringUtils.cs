@@ -34,9 +34,9 @@ namespace Modelos
         {
             using (RNGCryptoServiceProvider crypto = new RNGCryptoServiceProvider())
             {
-                byte[] tokenBuffer = new byte[8];
+                byte[] tokenBuffer = new byte[10];
                 crypto.GetBytes(tokenBuffer);
-                return Convert.ToBase64String(tokenBuffer);
+                return Convert.ToBase64String(tokenBuffer).Substring(0, 8);
             }
         }
     }

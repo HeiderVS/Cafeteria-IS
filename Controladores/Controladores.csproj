@@ -145,6 +145,7 @@
     <ItemGroup>
         <Compile Include="Administrador\AdminReportesControlador.cs" />
         <Compile Include="Administrador\CategoriaViewModel.cs" />
+        <Compile Include="Administrador\EditarUsuarioControlador.cs" />
         <Compile Include="Administrador\InventarioControlador.cs" />
         <Compile Include="Administrador\ProductoViewModel.cs" />
         <Compile Include="Administrador\ReporteViewModel.cs" />

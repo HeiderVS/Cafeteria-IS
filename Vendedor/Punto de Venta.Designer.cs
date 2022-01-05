@@ -1,4 +1,6 @@
 ﻿
+using Telerik.WinControls.UI;
+
 namespace Cafeteria_IS
 {
     partial class Punto_de_Venta
@@ -100,6 +102,7 @@ namespace Cafeteria_IS
             this.radGridOrden.Size = new System.Drawing.Size(421, 690);
             this.radGridOrden.TabIndex = 9;
             this.radGridOrden.ThemeName = "Material";
+            this.radGridOrden.CellValidating += new CellValidatingEventHandler(this.radGridOrden_ValueChanged);
             // 
             // radButton2
             // 

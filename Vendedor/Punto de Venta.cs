@@ -39,6 +39,7 @@ namespace Cafeteria_IS
             checkBoxColumn.FieldName = "OrdenCompra";
             checkBoxColumn.HeaderText = "Orden de Compra";
             this.radGridProductos.Columns.Add(checkBoxColumn);
+            //this.radGridProductos.Columns[]
         }
 
         private void InitOrdenGrid()
@@ -96,6 +97,7 @@ namespace Cafeteria_IS
             if (dr == DialogResult.OK)
             {
                 _puntoVentaControlador.FinalizarCompra();
+                this.radGridProductos.DataSource = _puntoVentaControlador.GetProductos();
                 ImprimirTicket();
             }
         }
@@ -159,6 +161,26 @@ namespace Cafeteria_IS
         private void TicketClosed(object sender, EventArgs eventArgs)
         {
             _puntoVentaControlador.LimpiarCompra();
+        }
+
+        private void radGridOrden_ValueChanged(object sender, CellValidatingEventArgs e)
+        {
+            GridViewDataColumn column = e.Column as GridViewDataColumn;
+
+            if (e.Row is GridViewDataRowInfo && column != null && column.Name == "cantidad")
+            {
+                if ((int)e.Value >
+                    _puntoVentaControlador.GetCantidadProductoById(
+                        (ProductoCompraViewModel) this.radGridOrden.CurrentRow.DataBoundItem))
+                {
+                    e.Cancel = true;
+                    ((GridViewDataRowInfo) e.Row).ErrorText = "Cantidad no disponible de productos";
+                }
+                else
+                {
+                    ((GridViewDataRowInfo) e.Row).ErrorText = string.Empty;
+                }
+            }
         }
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data.Entity;
 using System.Linq;
 using Controladores.Administrador;
 using Modelos;
@@ -22,14 +23,27 @@ namespace Controladores.Vendedor
         {
             using CafeteriaDBContext dbContext = new CafeteriaDBContext();
             return (from producto in dbContext.Productos
+                where producto.cantidad > 0
                 select new ProductoViewModel
                 {
                     categoria = producto.categoria.categoria,
                     id = producto.id,
                     marca = producto.marca,
                     nombre = producto.nombre,
-                    precio = producto.precio
+                    precio = producto.precio, 
+                    cantidad = producto.cantidad
                 }).ToList();
+        }
+
+        public int GetCantidadProductoById(ProductoCompraViewModel productoOrden)
+        {
+            using CafeteriaDBContext dbContext = new CafeteriaDBContext();
+            if (productoOrden != null)
+            {
+                return dbContext.Productos.Find(productoOrden.id).cantidad;
+            } 
+                
+            return -1;
         }
 
         public void AgregaOrdenCompra(object producto)
@@ -63,10 +77,16 @@ namespace Controladores.Vendedor
                         }).ToList(),
                     fecha = DateTime.Now
                 });
+
+                // actualiza cantidad de producto disponible.
+                foreach (ProductoCompraViewModel productoCompra in OrdenCompra)
+                {
+                    Producto editProducto = dbContext.Productos.Find(productoCompra.id);
+                    editProducto.cantidad = editProducto.cantidad - productoCompra.cantidad;
+                    dbContext.Entry(editProducto).State = EntityState.Modified;
+                }
                 dbContext.SaveChanges();
             }
-
-            Console.Write("test");
         }
 
         public void LimpiarCompra()

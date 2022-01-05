@@ -99,6 +99,8 @@ namespace Cafeteria_IS
             this.radGridView1.Size = new System.Drawing.Size(1033, 500);
             this.radGridView1.TabIndex = 11;
             this.radGridView1.ThemeName = "Material";
+            this.radGridView1.CellValidating += new CellValidatingEventHandler(this.radGridView1_CellValidating);
+            this.radGridView1.CellEndEdit += new GridViewCellEventHandler(this.radGridView1_CellEvent);
             this.radGridView1.RowsChanging += new GridViewCollectionChangingEventHandler(this.radGridView1_ValueChanging);
             this.radGridView1.RowsChanged +=
                 new GridViewCollectionChangedEventHandler(this.radGridView1_CollectionChanged);

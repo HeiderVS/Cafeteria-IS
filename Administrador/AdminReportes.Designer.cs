@@ -352,7 +352,7 @@ namespace Cafeteria_IS
             // 
             this.radDateReportStart.CalendarSize = new System.Drawing.Size(290, 320);
             this.radDateReportStart.Location = new System.Drawing.Point(188, 173);
-            this.radDateReportStart.MaxDate = new System.DateTime(2021, 12, 15, 18, 28, 52, 0);
+            this.radDateReportStart.MaxDate = new System.DateTime(2021, 12, 21, 0, 0, 0, 0);
             this.radDateReportStart.Name = "radDateReportStart";
             this.radDateReportStart.Size = new System.Drawing.Size(164, 36);
             this.radDateReportStart.TabIndex = 3;
@@ -396,14 +396,15 @@ namespace Cafeteria_IS
             // 
             this.radDateReportEnd.CalendarSize = new System.Drawing.Size(290, 320);
             this.radDateReportEnd.Location = new System.Drawing.Point(523, 173);
-            this.radDateReportEnd.MaxDate = new System.DateTime(2021, 12, 15, 0, 0, 0, 0);
+            this.radDateReportEnd.MaxDate = new System.DateTime(2021, 12, 21, 0, 0, 0, 0);
             this.radDateReportEnd.MinDate = new System.DateTime(2010, 1, 1, 0, 0, 0, 0);
             this.radDateReportEnd.Name = "radDateReportEnd";
             this.radDateReportEnd.Size = new System.Drawing.Size(164, 36);
             this.radDateReportEnd.TabIndex = 8;
             this.radDateReportEnd.TabStop = false;
+            this.radDateReportEnd.Text = "21 December 2021";
             this.radDateReportEnd.ThemeName = "Material";
-            this.radDateReportEnd.Value = new System.DateTime(((long) (0)));
+            this.radDateReportEnd.Value = new System.DateTime(2021, 12, 21, 0, 0, 0, 0);
             this.radDateReportEnd.ValueChanged += new System.EventHandler(this.radDateReportEnd_ValueChanged);
             // 
             // radBtnImprimir

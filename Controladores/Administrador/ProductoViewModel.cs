@@ -9,5 +9,6 @@ namespace Controladores.Administrador
         public String marca { get; set; }
         public decimal precio { get; set; }
         public String categoria { get; set; }
+        public int cantidad { get; set; }
     }
 }

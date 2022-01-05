@@ -32,7 +32,8 @@ namespace Controladores.Administrador
                     id = producto.id,
                     marca = producto.marca,
                     nombre = producto.nombre,
-                    precio = producto.precio
+                    precio = producto.precio,
+                    cantidad = producto.cantidad
                 }).ToList();
         }
 
@@ -76,6 +77,7 @@ namespace Controladores.Administrador
                 editProducto.nombre = producto.nombre;
                 editProducto.marca = producto.marca;
                 editProducto.precio = producto.precio;
+                editProducto.cantidad = producto.cantidad;
                 dbContext.Entry(editProducto).State = EntityState.Modified;
                 dbContext.SaveChanges();
             }

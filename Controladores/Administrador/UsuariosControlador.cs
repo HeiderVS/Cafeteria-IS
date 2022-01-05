@@ -76,6 +76,16 @@ namespace Controladores.Administrador
             return dbContext.Usuarios.Find(usuarioViewModel.id);
         }
 
+        public void ActualizarUsuario(UsuarioInfoViewModel usuarioInfoViewModel)
+        {
+            Usuario editUsuario = GetUsuarioById(usuarioInfoViewModel);
+            editUsuario.nombre = usuarioInfoViewModel.name;
+            editUsuario.apellidoMaterno = usuarioInfoViewModel.maternal;
+            editUsuario.apellidoPaterno = usuarioInfoViewModel.paternal;
+            using CafeteriaDBContext dbContext = new CafeteriaDBContext();
+            dbContext.Entry(editUsuario).State = EntityState.Modified;
+            dbContext.SaveChanges();
+        }
         public void EliminarUsuario(UsuarioInfoViewModel usuarioInfoViewModel)
         {
             using CafeteriaDBContext dbContext = new CafeteriaDBContext();
